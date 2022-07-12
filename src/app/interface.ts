@@ -1,0 +1,32 @@
+export interface HomePage{
+  data:{
+    id:number;
+    attributes:{
+      Name:string;
+      Email:string;
+      Cellphone:string;
+      Website:string;
+      BioSummary:string;
+      FullBio:string;
+      LinkedIn:string;
+      Github:string;
+      Behance:string;
+      Logo:{
+        data:{
+          attributes:{
+            url:string;
+          }
+        }
+      },
+      WebsiteHeroImage:{
+        data:{
+          attributes:{
+            url:string;
+            height:number;
+            width:number;
+          }
+        }
+      }
+    }
+  }
+}
