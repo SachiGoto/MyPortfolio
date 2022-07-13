@@ -15,5 +15,5 @@
 
   </div>
   <re-captcha (resolved)="resolved($event)" siteKey="6LcbP-cgAAAAAK6KiBfA0OFIhmV5XIj7aMnth4MH"></re-captcha>
-  <button (click)="submitLead()" type="submit" class="btn btn-primary">Submit</button>
+  <button (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary">Submit</button>
 

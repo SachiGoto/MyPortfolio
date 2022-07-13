@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
   name='';
   email='';
   message='';
+  formInvalid = true;
 
   submitLead(){
     let leaddata = {
@@ -32,7 +33,10 @@ export class ContactComponent implements OnInit {
   }
 
   resolved(event:any){
-
+      // console.log(event);
+      if(event){
+        this.formInvalid = false;
+      }
   }
 
   ngOnInit(): void {
