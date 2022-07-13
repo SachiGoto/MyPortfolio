@@ -11,9 +11,16 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
+import { FormsModule } from '@angular/forms';
+import { RecaptchaModule } from "ng-recaptcha";
+
+
 
 @NgModule({
+
+
   declarations: [
+
     AppComponent,
     AboutComponent,
     HomeComponent,
@@ -27,7 +34,10 @@ import { SocialComponent } from './social/social.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserModule,
+    RecaptchaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

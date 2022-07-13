@@ -21,6 +21,11 @@ export class CommonService {
 
  }
 
+ postlead(data:any){
+      return this.http.post(this.url + '/api/contacts', data)
+
+ }
+
 
 
 }

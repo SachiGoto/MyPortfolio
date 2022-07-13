@@ -1,0 +1,10 @@
+POST https://cms.sachigoto.me/api/contacts
+Content-Type: application/json
+
+{
+  "data":{
+    "name":"Test name from local",
+    "email":"test@test.com",
+    "message":"Some test message from local"
+  }
+}
