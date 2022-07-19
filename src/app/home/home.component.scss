@@ -33,7 +33,7 @@
 // }
 
 // .social{
-//    flex-grow:0;
+//   margin:2%;
 // }
 
 .titleContainer{
@@ -44,4 +44,8 @@
   flex-direction:column;
   // @include centercenter;
 
+}
+
+.social{
+  width:50%;
 }
