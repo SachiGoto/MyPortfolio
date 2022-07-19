@@ -11,8 +11,10 @@ const routes: Routes = [
   {path:"", component: HomeComponent},
   {path:"projects", component: ProjectsComponent},
   {path:"about-me", component:AboutComponent},
-  {path:"projects/:projectID", component:ProjectDetailsComponent},
-   {path:"contact", component:ContactComponent}
+  // {path:"projects/:projectID/:project.attributes.Slug", component:ProjectDetailsComponent},
+  {path:"projects/:projectID/:slug", component:ProjectDetailsComponent},
+   {path:"contact", component:ContactComponent},
+
 ];
 
 @NgModule({

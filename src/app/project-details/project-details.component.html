@@ -1,1 +1,63 @@
-<p>project-details works!</p>
+<!-- <p>project-details works!</p> -->
+
+
+
+
+
+<div class="container">
+  <div class="btnContainer">
+    <!-- <button class="websiteLink"><a class="button" target="_blank" href="{{project.attributes.WebLink}}"></a>Visit</button> -->
+    <a target="_blank" href="{{project.attributes.WebLink}}" class="button">Visit</a>
+  </div>
+
+
+  <div class="center titleContainer" style="background-image:url({{websiteHeroImage}})">
+    <h1>{{project.attributes.Title}}</h1>
+    <h2>{{project.attributes.Tagline}}</h2>
+
+
+</div>
+
+<!-- <div class="imagecontainer">
+
+</div> -->
+
+
+<!-- <div id="test"></div> -->
+
+
+  <div class="imagecontainer" id="imagecontainer">
+    <div class="image"><img aos-init data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom" [src]="server + project.attributes.MainImage.data.attributes.formats.medium.url"></div>
+    <div *ngFor="let image of project.attributes.Images.data" class="image" >
+       <img aos-init data-aos="zoom-in"
+       data-aos-duration="3000" [src]=" server + image.attributes.formats.large.url">
+
+
+      </div>
+
+      <div class="image" *ngIf="project.id === 4">
+        <h3 class="prototype-text">Check out the prototype! <br>
+          It works like a real mobile app!</h3>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fn2Z5E2dGcE4LYkwb7WTIKt%2Fwakie-wakie%3Fpage-id%3D0%253A1%26node-id%3D1%253A333%26viewport%3D436%252C317%252C0.1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A333" allowfullscreen></iframe>
+
+    </div>
+
+
+
+
+    <div class="footer centercenter">
+      <p routerLink="/projects">go back</p>
+      <p>Visit</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- {{project | json}} -->
+
+
+

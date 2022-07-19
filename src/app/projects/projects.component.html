@@ -1,1 +1,44 @@
-<p>projects works!</p>
+<div class="box" style="background-image:url({{websiteHeroImage}})"  >
+
+</div>
+
+<app-navbar class="navBar"></app-navbar>
+<div class="projectContainer">
+  <div class="project" *ngFor="let project of projects">
+    <h2>{{project.attributes.Title}}</h2>
+
+    <div class="projectImage">
+      <a [routerLink]="['/projects', project.id, project.attributes.Slug]"> <img [src]=" server + project.attributes.MainImage.data.attributes.formats.medium.url"></a>
+
+    </div>
+    <h4>{{project.attributes.Tagline}}</h4>
+    <p class="summary">{{project.attributes.Summary}}</p>
+    <div class="skillsContainer">
+
+      <ul>
+        <li class="skill">Tools: </li>
+        <li class="skill" *ngFor="let skill of project.attributes.skills.data">
+
+          <!-- {{skill | json}} -->
+          <img class="logoimage" [src]="server + skill.attributes.SkillLogo.data.attributes.url">
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <a [routerLink]="['/projects', project.id]">More details....</a> -->
+
+    <!-- project.attributes.Slug -->
+  </div>
+</div>
+
+
+
+
+

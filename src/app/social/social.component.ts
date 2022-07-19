@@ -15,7 +15,7 @@ export class SocialComponent implements OnInit {
 
   ngOnInit(): void {
 
-      this.cs.getProjects().subscribe(res=>{
+      this.cs.getAboutMe().subscribe(res=>{
              this.linkedIn = res.data.attributes.LinkedIn;
              this.github = res.data.attributes.Github;
              this.behance = res.data.attributes.Behance;

@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { FormsModule } from '@angular/forms';
 import { RecaptchaModule } from "ng-recaptcha";
+import { MyskillsComponent } from './myskills/myskills.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -29,6 +31,8 @@ import { RecaptchaModule } from "ng-recaptcha";
     ProjectDetailsComponent,
     FooterComponent,
     SocialComponent,
+    MyskillsComponent,
+    NavbarComponent,
 
   ],
   imports: [
