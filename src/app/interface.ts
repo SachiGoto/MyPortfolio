@@ -191,3 +191,33 @@ data:[{
 //     ProjectDetail
 
 // }
+
+export interface Education {
+
+    //  data:[
+    //   {
+      id:string;
+      attributes:{
+        School:string;
+        Startdate:string;
+        Enddate:string;
+        Note:"string";
+        Logo:{
+          data:{
+            attributes:{
+              formats:{
+                thumbnail:{
+                  url:string;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+//   ]
+
+// }
+
+

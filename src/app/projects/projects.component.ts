@@ -27,7 +27,8 @@ server = environment.server;
     this.cs.getAboutMe().subscribe(res=>{
       console.log(res);
       // better make an interface so that I can see what is in the data.
-      this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+      // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+      this.websiteHeroImage = res.data.attributes.WebsiteHeroImage.data.attributes.url;
 
       console.log(this.websiteHeroImage);
 

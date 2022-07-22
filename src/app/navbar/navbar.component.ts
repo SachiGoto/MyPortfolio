@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
       this.logo = res.data.attributes.Logo.data.attributes.url;
 
 
-      console.log("logo url is" , this.logo)
+      // console.log("logo url is" , this.logo)
 
     })
   }

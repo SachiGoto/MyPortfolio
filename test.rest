@@ -31,3 +31,5 @@ GET https://localhost:1337/api/about-me
 
 GET http://localhost:1337/api/project-news?populate=deep
 
+###
+GET http://localhost:1337/api/educations?populate=deep

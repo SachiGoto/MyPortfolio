@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { HomePage, ProjectDetail, Projects } from '../interface';
+import { HomePage, ProjectDetail, Projects, Education } from '../interface';
 import{Skills} from '../interface'
 
 @Injectable({
@@ -41,6 +41,12 @@ export class CommonService {
   // return this.http.get<ProjectDetail>(this.url +  '/api/project-news/' + id + '?populate=deep')
 
 
+ }
+
+ getEducation(){
+  // return this.http.get<Education[]>(this.url + '/api/educations/?populate=deep')
+  // return this.http.get<Education>(this.url + '/api/educations/?populate=deep')
+  return this.http.get<{data:Education[]}>(this.url + '/api/educations/?populate=deep')
  }
 
 //  https://cms.sachigoto.me/api/project-news/3?populate=deep

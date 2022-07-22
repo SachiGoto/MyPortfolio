@@ -4,9 +4,17 @@
    <div class="titleContainer">
      <h1>Hi, I'm {{name}}</h1>
      <h2>Full-stack developer</h2>
+     <div *ngFor="let school of educationArray">
+      <h1>School is {{school.attributes.School}}</h1>
+     </div>
+
      <social class="social"></social>
 
+
+
    </div>
+
+</div>
 
 
 
@@ -15,7 +23,7 @@
    <!-- <button type="button" id="btnTooltip" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
     Tooltip on top
   </button> -->
-</div>
+<!-- </div> -->
 
 
 
