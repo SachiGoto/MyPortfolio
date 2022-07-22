@@ -32,11 +32,12 @@ export class CommonService {
  }
 
  getProjects(){
-  return this.http.get<Projects>(this.url + '/api/project-news?populate=deep,3')
+  // return this.http.get<Projects[]>(this.url + '/api/project-news?populate=deep')
+  return this.http.get<{data:ProjectDetail}>(this.url + '/api/project-news?populate=deep')
  }
 
  getProjectById(id:number){
-  return this.http.get<{data:ProjectDetail}>(this.url + '/api/project-news/' + id + '?populate=deep')
+  return this.http.get<ProjectDetail>(this.url + '/api/project-news/' + id + '?populate=deep')
   // return this.http.get<ProjectDetail>(this.url +  '/api/project-news/' + id + '?populate=deep')
 
 

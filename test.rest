@@ -15,11 +15,19 @@ GET https://cms.sachigoto.me/api/skills/?populate=deep,2
 
 
 ###
-GET https://cms.sachigoto.me/api/project-news?populate=deep,3
+GET https://cms.sachigoto.me/api/project-news?populate=deep
 
 
 ###
 GET https://cms.sachigoto.me/api/about-me?populate=deep
 
 ###
-GET https://cms.sachigoto.me/api/project-news/3?populate=deep
+GET https://cms.sachigoto.me/api/project-news/1?populate=deep
+
+###
+GET https://localhost:1337/api/about-me
+
+###
+
+GET http://localhost:1337/api/project-news?populate=deep
+

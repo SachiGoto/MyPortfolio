@@ -10,7 +10,7 @@ import { CommonService } from '../service/common.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-projects:ProjectDetail[]=[];
+projects:any;
 websiteHeroImage ='';
 
 server = environment.server;
@@ -18,10 +18,9 @@ server = environment.server;
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
-    this.cs.getProjects().subscribe(
-      res=>{
+    this.cs.getProjects().subscribe(res=>{
          this.projects = res.data;
-         console.log(this.projects);
+         console.log("project data" , res.data);
       }
     )
 

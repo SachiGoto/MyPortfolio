@@ -104,7 +104,7 @@ export interface Skills{
 
 export interface Projects{
 
-    data:ProjectDetail[]
+    data:ProjectDetail[];
 
 
 
@@ -113,7 +113,7 @@ export interface Projects{
 
 
 export interface ProjectDetail{
-
+data:[{
   id:number;
   attributes:{
     Title:string;
@@ -179,6 +179,8 @@ export interface ProjectDetail{
     }
 
 }
+}
+]
 }
 
 

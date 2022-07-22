@@ -28,7 +28,8 @@ export class ProjectDetailsComponent implements OnInit {
   // private observer:IntersectionObserver;
 
   constructor(private route:ActivatedRoute, private http:CommonService) {}
-  project:ProjectDetail;
+  // project:ProjectDetail;
+  project:any;
 
 server = environment.server;
 
@@ -43,7 +44,7 @@ websiteHeroImage='';
     let slug:any = this.route.snapshot.paramMap.get("slug")
     this.http.getProjectById(id).subscribe(project=>{
 this.project = project.data;
-console.log(project.data)
+console.log("project is " , project.data)
 
     })
 
@@ -55,7 +56,7 @@ console.log(project.data)
     // better make an interface so that I can see what is in the data.
     this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
 
-    console.log(this.websiteHeroImage);
+    console.log("webstieImage" , this.websiteHeroImage);
 
 
 

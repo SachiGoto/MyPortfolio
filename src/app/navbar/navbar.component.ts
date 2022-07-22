@@ -11,11 +11,16 @@ import { environment } from 'src/environments/environment';
 export class NavbarComponent implements OnInit {
   title = 'MyPortfolio';
   logo ='';
+  server = environment.server;
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
     this.cs.getAboutMe().subscribe(res=>{
-      this.logo = environment.server + res.data.attributes.Logo.data.attributes.url;
+      // this.logo = this.server + res.data.attributes.Logo.data.attributes.url;
+      this.logo = res.data.attributes.Logo.data.attributes.url;
+
+
+      console.log("logo url is" , this.logo)
 
     })
   }

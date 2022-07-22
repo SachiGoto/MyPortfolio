@@ -20,13 +20,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.http.getAboutMe().subscribe(res=>{
-      console.log(res);
+      console.log("res is " , res.data.attributes);
       // better make an interface so that I can see what is in the data.
       this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
 
       console.log(this.websiteHeroImage);
 
-      this.name= res.data.attributes.Name;
+
 
     })
 

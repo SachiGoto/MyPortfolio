@@ -5,13 +5,18 @@
 <app-navbar class="navBar"></app-navbar>
 <div class="projectContainer">
   <div class="project" *ngFor="let project of projects">
-    <h2>{{project.attributes.Title}}</h2>
+     <h2>{{project.attributes.Title}}</h2>
+    <p>{{project.attributes.Title| json}}</p>
+    <!-- <h1>Hello</h1> -->
+
+
+
 
     <div class="projectImage">
       <a [routerLink]="['/projects', project.id, project.attributes.Slug]"> <img [src]=" server + project.attributes.MainImage.data.attributes.formats.medium.url"></a>
 
     </div>
-    <h4>{{project.attributes.Tagline}}</h4>
+     <h4>{{project.attributes.Tagline}}</h4>
     <p class="summary">{{project.attributes.Summary}}</p>
     <div class="skillsContainer">
 
@@ -19,14 +24,18 @@
         <li class="skill">Tools: </li>
         <li class="skill" *ngFor="let skill of project.attributes.skills.data">
 
-          <!-- {{skill | json}} -->
+          <!-- {{skill | json}}  -->
           <img class="logoimage" [src]="server + skill.attributes.SkillLogo.data.attributes.url">
         </li>
       </ul>
     </div>
 
+  </div>
 
 
+  <!-- {{projects.data | json}} -->
+</div>
+<div>Hello</div>
 
 
 
@@ -35,8 +44,7 @@
     <!-- <a [routerLink]="['/projects', project.id]">More details....</a> -->
 
     <!-- project.attributes.Slug -->
-  </div>
-</div>
+
 
 
 
