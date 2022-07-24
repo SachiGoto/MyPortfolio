@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { CommonService } from '../service/common.service';
 
 @Component({
@@ -8,12 +9,14 @@ import { CommonService } from '../service/common.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor( private cs:CommonService) { }
+  constructor( private http:CommonService) { }
 
   name='';
   email='';
   message='';
   formInvalid = true;
+  websiteHeroImage='';
+
 
   formMessageHidden = true;
 
@@ -27,11 +30,15 @@ export class ContactComponent implements OnInit {
       }
     }
 
-    this.cs.postlead(leaddata).subscribe(res=>{
+    this.http.postlead(leaddata).subscribe(res=>{
       console.log(res);
       this.formMessageHidden = false;
 
+
+
     })
+
+
 
 
 
@@ -46,6 +53,24 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.http.getAboutMe().subscribe(res=>{
+      console.log("res is " , res.data.attributes);
+      // better make an interface so that I can see what is in the data.
+      // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+      this.websiteHeroImage =res.data.attributes.WebsiteHeroImage.data.attributes.url;
+      console.log(this.websiteHeroImage);
+
+      // this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
+
+      // this.fullbio=res.data.attributes.FullBio;
+
+
+      // this.name = res.data.attributes.Name;
+
+
+
+    })
   }
 
 }

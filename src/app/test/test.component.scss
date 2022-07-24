@@ -1,0 +1,47 @@
+.box{
+  width:100px;
+  height:100px;
+  background-color:pink;
+  margin-bottom:150vh;
+}
+
+.aboutMeContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:80%;
+  height:90vh;
+  margin:10% auto;
+
+
+}
+
+.aboutMeContent{
+  background-color:rgba(245, 245, 245,0.8);
+  height:50vh;
+  flex-direction:column;
+  border-radius:10px;
+
+}
+
+.aboutMeImg{
+  // height:50vh;
+
+
+
+}
+
+.resumeBtn{
+  width:50%;
+  // height:50px;
+
+  img{
+   width: 20%;
+  //  height: 100%;
+  //  width:50px;
+   object-fit: cover;
+   border-radius:10px;
+
+ }
+}
+

@@ -18,6 +18,17 @@ export interface HomePage{
           }
         }
       },
+      Headshot:{
+        data:{
+          attributes:{
+            formats:{
+              large:{
+                url:string;
+              }
+            }
+          }
+        }
+      }
       WebsiteHeroImage:{
         data:{
           attributes:{
@@ -40,9 +51,11 @@ export interface Skill{
           attributes:{
             SkillName:string;
             SkillScore:string;
+            Category:string;
             SkillLogo:{
                 data:{
                   attributes:{
+                    url:string,
                     formats:{
                       thumbnail:{
                         url:string;
@@ -131,6 +144,9 @@ data:[{
         data:{
           attributes:{
             formats:{
+              large:{
+                url:string;
+              }
               medium:{
                 url:string;
               }
@@ -201,7 +217,9 @@ export interface Education {
         School:string;
         Startdate:string;
         Enddate:string;
-        Note:"string";
+        Note:string;
+        Year:string;
+        Location:string;
         Logo:{
           data:{
             attributes:{

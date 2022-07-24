@@ -1,1 +1,98 @@
-<p>about works!</p>
+
+
+
+
+
+
+<div class="background" style="background-image:url({{websiteHeroImage}})"></div>
+<app-navbar class="navBar"></app-navbar>
+
+
+<div class="mainContainer">
+      <div class="aboutMeContainer row">
+        <div class="aboutMeContent centercenter col-8">
+          <h2>About me</h2>
+          <!-- <a class="page-scroll link-underline-menu" (click)="scroll($event, about)" href="#about">About</a> -->
+         <p>{{fullbio}}</p>
+
+        </div>
+        <div class="aboutMeImg col-4">
+          <img [src]="profileImage">
+         </div>
+
+         <button class=" resumeBtn btn btn-primary">My resume
+          <img src="../../assets/logos/download.png">
+          </button>
+      </div>
+
+
+
+
+
+
+
+<div class="educationContainer centercenter">
+
+    <h2 class="p-5"> Schools</h2>
+    <div class="educationContainer">
+        <div class="educationSubContainer p-3 row" *ngFor="let education of education">
+
+          <h3 class="col-4">{{education.attributes.School}}</h3>
+          <h4 class="col-8">{{education.attributes.Note}}</h4>
+          <p class="col-12">{{education.attributes.Location}}</p>
+          <p class="col-12 educationDate">{{education.attributes.Year}}</p>
+        </div>
+    </div>
+
+
+  </div>
+
+<div class="c" id="c">
+
+</div>
+
+
+
+
+  <h2 class="skillsTitle">Skills</h2>
+<div class="skillsContainer row">
+
+  <div class="designTools toolBox col-4">
+    <div class="row">
+      <div *ngFor="let skill of designSkills" class="col-4" >
+            <div  *ngIf="skill.attributes.Category === 'Design tools' ">
+              <img  [src]= "skill.attributes.SkillLogo.data.attributes.url">
+            </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="frontendTools  toolBox col-4">
+      <div class="row">
+        <div *ngFor="let skill of frontendSkills" class="col-4">
+            <div *ngIf="skill.attributes.Category === 'Frontend development tools'" >
+              <img [src]= "skill.attributes.SkillLogo.data.attributes.url">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="backendTools toolBox col-4">
+      <div class="row">
+        <div *ngFor="let skill of backendSkills" class="col-4">
+            <div *ngIf="skill.attributes.Category === 'Backend development tools'">
+              <img [src]= "skill.attributes.SkillLogo.data.attributes.url">
+            </div>
+           </div>
+      </div>
+    </div>
+
+
+
+</div>
+
+</div>
+
+<script>
+
+</script>

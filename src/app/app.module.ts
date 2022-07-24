@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { RecaptchaModule } from "ng-recaptcha";
 import { MyskillsComponent } from './myskills/myskills.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -33,6 +35,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     SocialComponent,
     MyskillsComponent,
     NavbarComponent,
+    TestComponent,
 
   ],
   imports: [
@@ -42,6 +45,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     BrowserModule,
     RecaptchaModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

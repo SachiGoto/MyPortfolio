@@ -29,11 +29,17 @@
 
 
   <div class="imagecontainer" id="imagecontainer">
-    <div class="image"><img aos-init data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom" [src]="server + project.attributes.MainImage.data.attributes.formats.medium.url"></div>
+    <div class="image">
+      <!-- <img aos-init data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom" [src]="server + project.attributes.MainImage.data.attributes.formats.medium.url"> -->
+      <img aos-init data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom" [src]="project.attributes.MainImage.data.attributes.formats.large.url">
+    </div>
     <div *ngFor="let image of project.attributes.Images.data" class="image" >
+       <!-- <img aos-init data-aos="zoom-in"
+       data-aos-duration="1000" [src]=" server + image.attributes.formats.large.url"> -->
        <img aos-init data-aos="zoom-in"
-       data-aos-duration="1000" [src]=" server + image.attributes.formats.large.url">
+       data-aos-duration="1000" [src]="image.attributes.formats.large.url">
 
 
       </div>

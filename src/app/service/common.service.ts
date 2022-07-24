@@ -31,6 +31,7 @@ export class CommonService {
   return this.http.get<Skills>(this.url + '/api/skills/?populate=deep,2');
  }
 
+
  getProjects(){
   // return this.http.get<Projects[]>(this.url + '/api/project-news?populate=deep')
   return this.http.get<{data:ProjectDetail}>(this.url + '/api/project-news?populate=deep')
@@ -50,5 +51,9 @@ export class CommonService {
  }
 
 //  https://cms.sachigoto.me/api/project-news/3?populate=deep
+
+
+
+
 
 }

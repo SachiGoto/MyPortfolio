@@ -1,5 +1,17 @@
+<div class="background" style="background-image:url({{websiteHeroImage}})"></div>
+<app-navbar class="navBar"></app-navbar>
 
-  <div class="formClass">
+<div class="contactContainer row">
+  <h2 class="containerTitle">Get in touch! </h2>
+
+  <div class="contactContent col-sm-12 col-md-6">
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid reiciendis, minus perspiciatis aliquam distinctio illum odio quas tenetur quod iste!</p>
+  </div>
+
+
+
+  <form #form="ngForm" class="formClass col-sm-12 col-md-6">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input [(ngModel)]="name" type="email" class="form-control" id="name" aria-describedby="emailHelp">
@@ -7,7 +19,7 @@
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>
       <input [(ngModel)]="email"  type="email" class="form-control" id="email" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
     </div>
     <div class="form-group">
       <label for="message">Comments</label>
@@ -16,9 +28,12 @@
     <div class="mt-3">
       <re-captcha (resolved)="resolved($event)" siteKey="6LcbP-cgAAAAAK6KiBfA0OFIhmV5XIj7aMnth4MH" class="mt-3"></re-captcha>
     </div>
-    <button class="mt-3" (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary">Submit</button>
+    <button (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary mt-3">Send</button>
 
     <div class="mt-3" [hidden]="formMessageHidden">
       Thank you for contacting me, {{name}}. I will get in touch with you soon!
     </div>
-  </div>
+
+
+  </form>
+</div>

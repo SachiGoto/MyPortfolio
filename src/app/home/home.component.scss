@@ -49,3 +49,20 @@
 .social{
   width:50%;
 }
+
+
+@keyframes scaleup{
+  from{
+    transform:scale(1.0) translateY(0);
+    opacity:1
+  }
+
+  to{
+    transform:scale(2.3) translateY(200px);
+    opacity:0
+  }
+}
+
+.scaleup{
+  animation: scaleup 4s
+}

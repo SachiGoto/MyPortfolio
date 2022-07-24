@@ -1,3 +1,25 @@
+body{
+  overflow:hidden;
+}
+
+
+.test{
+  width:100vw;
+  height:100vh;
+  // background-color:blue;
+  overflow:hidden;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+
+.navBar{
+   z-index:10;
+}
+
+
 li{
 
   list-style:none;
@@ -15,6 +37,7 @@ li{
   top:0;
   width:100vw;
 
+
 }
 
 ul{
@@ -24,18 +47,57 @@ ul{
 .project{
   // padding-top:12%;
   width:80%;
-  margin:0 auto 5% auto;
+  // margin:0 auto 5% auto;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   background-color:white;
   border-radius:10px;
-  padding-top:5%;
+  // padding-top:8%;
+  transform: rotate(90deg);
+  //  margin-bottom:13%;
+  // margin-left:3%;
+  padding:5%;
+  height:80vh;
+  margin-top:30%;
+  margin-right:10%;
+  // position: absolute;
+  // top: 10%;
+  // left: -7%;
 
 
 
 }
+
+
+
+
+.projectContainer{
+  // padding-top:12%;
+  overflow-y: auto;
+  // overflow-x: hidden;
+  transform: rotate(-90deg);
+  // position: relative;
+// transform-origin: right top;
+// position:absolute;
+// display: block;
+// top: 0;
+// left: 0;
+width:100vh;
+height:100vw;
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+padding-bottom: 10vh;
+// background-color:yellow;
+
+}
+
+
+
+
 
 .projectImage{
   padding:2% 0;
@@ -63,7 +125,9 @@ ul{
   width:100vw;
   height:100vh;
   // background-attachment: fixed;
-  position:fixed;
+position:absolute;
+top:0;
+left:0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,19 +138,25 @@ ul{
 }
 
 .summary{
-  width:50%;
+  width:80%;
   margin:2% auto;
   text-align:center;
   padding-bottom:5%;
 }
 
-.projectContainer{
-  padding-top:12%;
 
-}
 
 .logoimage{
   padding:2%;
 }
+
+
+.mainContainer{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  position:relative;
+}
+
 
 

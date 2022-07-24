@@ -1,0 +1,184 @@
+
+
+// .c{
+//   width:100px;
+//   height:100px;
+//   background-color:aquamarine
+// }
+
+
+
+
+
+.background{
+  width:100vw;
+  height:100vh;
+  animation: fadein 4s;
+  position:fixed;
+top:0;
+left:0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+
+
+}
+
+
+
+
+
+.navBar{
+  position:fixed;
+  top:0;
+  width:100vw;
+
+}
+
+
+@keyframes moveToRight{
+  0%{
+   opacity:0;
+   transform:translateX(-120%)
+  }50%{
+   opacity:0.5;
+  }
+  100%{
+   opacity:1;
+   transform:translateX(0%)
+
+  }
+}
+
+
+@keyframes moveToLeft{
+  0%{
+   opacity:0;
+  //  transform: translateY(-81%);
+  //  transform:translateX(120%)
+   transform:translate(120%, -81%);
+  }50%{
+   opacity:0.5;
+  }
+  100%{
+   opacity:1;
+  //  transform:translateX(0%)
+   transform:translate(-14%, -81%);
+
+  }
+}
+
+.aboutMeContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:80%;
+  height:90vh;
+  margin:10% auto;
+
+
+
+
+}
+
+.aboutMeContent{
+  background-color:rgba(245, 245, 245,0.8);
+  height:50vh;
+  flex-direction:column;
+  border-radius:10px;
+  animation: moveToRight 3s;
+
+}
+
+.aboutMeImg{
+  // height:50vh;
+  animation: moveToLeft 3s;
+  transform: translate(-14%, -81%);
+
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:10px;
+
+  }
+}
+
+
+
+@keyframes fadein {
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+
+.educationContainer{
+  height:100vh;
+  width:80vw;
+  margin:0 auto;
+  flex-direction:column;
+
+   .educationSubContainer{
+       h3,h4{
+        // text-align:center;
+       }
+       .educationDate{
+        display:flex;
+        // justify-content:center;
+       }
+   }
+
+
+}
+
+
+.skillsTitle{
+  text-align:center;
+  width:100vw;
+  margin-bottom:10%;
+}
+
+
+.skillsContainer{
+  height:100vh;
+  width: 80vw;
+    margin: 0 auto;
+
+h2{
+  text-align:center;
+}
+
+
+}
+
+.toolBox{
+   display:flex;
+   flex-direction:column;
+  //  background-color:aquamarine;
+
+  img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    margin:2%;
+  }
+}
+
+.fa-solid{
+  width:100px;
+  height:100px;
+  color:black;
+}
+
+.resumeBtn{
+  background-color:rgb(86, 86, 209);
+  width:30%;
+  color:black;
+  border:none;
+  img{
+    width:50px;
+
+  }
+}

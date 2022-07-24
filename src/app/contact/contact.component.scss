@@ -2,3 +2,35 @@
   max-width:500px;
   padding:50px;
 }
+
+.background{
+  width:100vw;
+  height:100vh;
+  animation: fadein 4s;
+  position:fixed;
+top:0;
+left:0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+
+
+}
+
+.containerTitle{
+  width:100vw;
+  text-align:center;
+}
+
+.contactContainer{
+  width:80vw;
+  margin:10vh auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.contactContent{
+ padding:5%;
+}
