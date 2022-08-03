@@ -19,13 +19,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private http:CommonService, private route:Router) { }
 
-scale = false;
+state = false;
 
 
 
-scaleup(){
+translate(){
 
-this.scale = true;
+this.state = true;
 console.log();
 
 setTimeout(()=>{

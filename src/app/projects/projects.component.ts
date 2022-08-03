@@ -18,6 +18,15 @@ server = environment.server;
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
+
+  // window.onbeforeunload = function () {
+  //     window.scrollTo(0, 0);
+  //   }
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
     this.cs.getProjects().subscribe(res=>{
          this.projects = res.data;
          console.log("project data" , res.data);

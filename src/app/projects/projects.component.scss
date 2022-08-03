@@ -2,8 +2,25 @@ body{
   overflow:hidden;
 }
 
+svg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  // min-width:1020px;
+  z-index:-1;
+  animation:fadein 2s;
 
-.test{
+ }
+
+ @keyframes fadein {
+  0%{opacity:0}
+  100%{opacity:1}
+}
+
+
+.mainContainer{
   width:100vw;
   height:100vh;
   // background-color:blue;
@@ -75,7 +92,7 @@ ul{
 
 .projectContainer{
   // padding-top:12%;
-  overflow-y: auto;
+  // overflow-y: auto;
   // overflow-x: hidden;
   transform: rotate(-90deg);
   // position: relative;
@@ -84,8 +101,8 @@ ul{
 // display: block;
 // top: 0;
 // left: 0;
-width:100vh;
-height:100vw;
+width:90vh;
+height:50vw;
 display: flex;
     flex-direction: column;
     justify-content: space-between;

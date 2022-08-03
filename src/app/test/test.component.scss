@@ -1,47 +1,90 @@
-.box{
-  width:100px;
-  height:100px;
-  background-color:pink;
-  margin-bottom:150vh;
-}
-
-.aboutMeContainer{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:80%;
-  height:90vh;
-  margin:10% auto;
-
+svg{
+ position:absolute;
+ top:0;
+ left:0;
+ width:100vw;
+ height:100vh;
+ min-width:1020px;
+ z-index:-1;
 
 }
 
-.aboutMeContent{
-  background-color:rgba(245, 245, 245,0.8);
-  height:50vh;
-  flex-direction:column;
-  border-radius:10px;
 
-}
+#mountain2{
 
-.aboutMeImg{
-  // height:50vh;
+  animation: moveup 5s infinite ease-in-out;
 
 
 
 }
 
-.resumeBtn{
-  width:50%;
-  // height:50px;
-
-  img{
-   width: 20%;
-  //  height: 100%;
-  //  width:50px;
-   object-fit: cover;
-   border-radius:10px;
-
- }
+@keyframes moveup{
+  0%{
+    transform:translateY(0px);
+  }50%{
+    transform:translateY(10px);
+  }100%{
+    transform:translateY(0px);
+  }
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  svg{
+
+    left:-30%;
+
+  }
+}
+
+
+
+
+// .box{
+//   width:100px;
+//   height:100px;
+//   background-color:pink;
+//   margin-bottom:150vh;
+// }
+
+// .aboutMeContainer{
+//   display:flex;
+//   justify-content:center;
+//   align-items:center;
+//   width:80%;
+//   height:90vh;
+//   margin:10% auto;
+
+
+// }
+
+// .aboutMeContent{
+//   background-color:rgba(245, 245, 245,0.8);
+//   height:50vh;
+//   flex-direction:column;
+//   border-radius:10px;
+
+// }
+
+// .aboutMeImg{
+//   // height:50vh;
+
+
+
+// }
+
+// .resumeBtn{
+//   width:50%;
+//   // height:50px;
+
+//   img{
+//    width: 20%;
+//   //  height: 100%;
+//   //  width:50px;
+//    object-fit: cover;
+//    border-radius:10px;
+
+//  }
+// }
 

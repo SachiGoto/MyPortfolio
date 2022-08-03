@@ -9,6 +9,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TestComponent } from './test/test.component';
 
 
+
 const routes: Routes = [
   {path:"home", component:HomeComponent},
   {path:"", component: HomeComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"projects/:projectID/:slug", component:ProjectDetailsComponent},
    {path:"contact", component:ContactComponent},
    {path:"navbar", component:NavbarComponent},
-   {path:"test", component:TestComponent}
+   {path:"test", component:TestComponent},
+   {path:"ecommerce", component:HomeComponent}
 
 ];
 
