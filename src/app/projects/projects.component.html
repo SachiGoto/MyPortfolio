@@ -199,8 +199,8 @@
     </svg>
 
   <app-navbar class="navBar"></app-navbar>
-
-  <div class="projectContainer">
+<div id="scroll-container">
+  <div id="projectContainer" class="projectContainer">
 
      <div class="project" *ngFor="let project of projects">
        <h2>{{project.attributes.Title}}</h2>
@@ -224,7 +224,7 @@
 
              <!-- {{skill | json}}  -->
             <!-- <img class="logoimage" [src]="server + skill.attributes.SkillLogo.data.attributes.url"> -->
-           <img class="logoimage" [src]="skill.attributes.SkillLogo.data.attributes.url">
+          <span class="tool" [attr.data-tip]="skill.attributes.SkillName"> <img class="logoimage"  [src]="skill.attributes.SkillLogo.data.attributes.url"></span>
           </li>
         </ul>
       </div>
@@ -235,7 +235,7 @@
 
   </div>
 
-
+</div>
 
 
 

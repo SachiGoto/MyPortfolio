@@ -21,7 +21,6 @@ $beige: #F1DFC5;
 
 
 
-
 svg{
   position:absolute;
   top:0;
@@ -277,17 +276,20 @@ svg{
   z-index:100;
   position:absolute;
   transform:translate(-50%, -50%);
-  top:50%;
+  top:34%;
   left:50%;
   // @include centercenter;
 
 }
 
 .social{
-  width:50%;
+  width:100%;
   margin-top:5%;
 }
 
+.social ul {
+  padding-left: 0 !important;
+}
 
 .exploreBtn{
 
@@ -326,6 +328,12 @@ svg{
 
     // left:-30%;
 
+  }
+
+
+  .titleContainer{
+    width: 100%;
+    text-align: center;
   }
 }
 

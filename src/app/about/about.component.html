@@ -462,9 +462,11 @@
 
 
       <div class="buttons">
+        <a target="_blank" href="../../assets/resume.pdf">
         <button class=" resumeBtn " style="font-weight:bold;"><a>My resume
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g data-name="download"><path  d="M25,19a1,1,0,0,0-1,1v5H8V20a1,1,0,0,0-2,0v5.14A1.93,1.93,0,0,0,8,27H24a1.93,1.93,0,0,0,2-1.86V20A1,1,0,0,0,25,19Z"/><path d="M15.27,20.68l0,0a1.2,1.2,0,0,0,.26.18l0,0h0A1,1,0,0,0,16,21a1,1,0,0,0,.38-.08l.12-.07a1.13,1.13,0,0,0,.18-.12l0,0,0,0,5-5.38a1,1,0,1,0-1.46-1.37L17,17.45V6a1,1,0,0,0-2,0V17.45l-3.27-3.52a1,1,0,1,0-1.46,1.37Z"/></g></svg></a>
           </button>
+        </a>
       </div>
 
 
@@ -473,14 +475,14 @@
 
 <div class="educationContainer centercenter">
 
-    <h2 class="p-5"> Schools</h2>
-    <div class="educationContainer">
+    <h2 class="educationTitle"> Schools</h2>
+    <div class="educationContent">
         <div class="educationSubContainer p-3 row" *ngFor="let education of education">
 
-          <h3 class="col-4">{{education.attributes.School}}</h3>
-          <h4 class="col-8">{{education.attributes.Note}}</h4>
-          <p class="col-12">{{education.attributes.Location}}</p>
-          <p class="col-12 educationDate">{{education.attributes.Year}}</p>
+          <h3 class="col-12 col-md-4">{{education.attributes.School}}</h3>
+          <h4 class=" col-12 col-md-8">{{education.attributes.Note}}</h4>
+          <p class="col-12 col-md-12">{{education.attributes.Location}}</p>
+          <p class="col-12 col-md-12 educationDate">{{education.attributes.Year}}</p>
         </div>
     </div>
 
@@ -502,29 +504,29 @@
     <div class="row">
       <div *ngFor="let skill of designSkills" class="col-4" >
             <div class="toolicon"  *ngIf="skill.attributes.Category === 'Design tools' ">
-              <img  [src]= "skill.attributes.SkillLogo.data.attributes.url">
+              <span class="tool" [attr.data-tip]="skill.attributes.SkillName">  <img  [src]= "skill.attributes.SkillLogo.data.attributes.url"> </span>
             </div>
       </div>
     </div>
   </div>
 
     <div class="frontendTools  toolBox col-8 col-lg-3">
-      <h3>Design Tools</h3>
+      <h3>Front-end  Tools</h3>
       <div class="row">
         <div *ngFor="let skill of frontendSkills" class="col-4">
             <div class="toolicon"  *ngIf="skill.attributes.Category === 'Frontend development tools'" >
-              <img [src]= "skill.attributes.SkillLogo.data.attributes.url">
+              <span class="tool" [attr.data-tip]="skill.attributes.SkillName">  <img [src]= "skill.attributes.SkillLogo.data.attributes.url"></span>
             </div>
         </div>
       </div>
     </div>
 
     <div class="backendTools toolBox col-8 col-lg-3">
-      <h3>Design Tools</h3>
+      <h3>Back-end Tools</h3>
       <div class="row">
         <div *ngFor="let skill of backendSkills" class="col-4">
             <div  class="toolicon" *ngIf="skill.attributes.Category === 'Backend development tools'">
-              <img [src]= "skill.attributes.SkillLogo.data.attributes.url">
+              <span class="tool" [attr.data-tip]="skill.attributes.SkillName">  <img [src]= "skill.attributes.SkillLogo.data.attributes.url"></span>
             </div>
            </div>
       </div>

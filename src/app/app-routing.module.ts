@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+
 import { ProjectsComponent } from './projects/projects.component';
 import { TestComponent } from './test/test.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
    {path:"contact", component:ContactComponent},
    {path:"navbar", component:NavbarComponent},
    {path:"test", component:TestComponent},
-   {path:"ecommerce", component:HomeComponent}
+   {path:"ecommerce", component:HomeComponent},
+
 
 ];
 

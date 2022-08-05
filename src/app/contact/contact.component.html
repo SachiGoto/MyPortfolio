@@ -4,17 +4,57 @@
 <div class="background" style="background-image:url(../../assets/wallpaper/portfoliowallpaperNight.svg)"></div>
 <app-navbar class="navBar"></app-navbar>
 
+
+
 <div class="contactContainer row">
-  <h2 class="containerTitle">Get in touch! </h2>
 
-  <div class="contactContent col-sm-12 col-md-6">
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid reiciendis, minus perspiciatis aliquam distinctio illum odio quas tenetur quod iste!</p>
+  <div class="contactContent col-sm-12 col-md-6 d-frex flex-column">
+
+    <h2 class="containerTitle">Get in touch! </h2>
+
+    <div class="contactVia">
+      You can also reach me via <br>
+
+
+        <div class="d-flex justify-content-center">
+          <div class="box">
+            <div class="email d-flex flex-column jusity-content-center align-items-center">
+            <li class=""><a href="#">Email</a>
+            </li>
+            <div class="line">
+            </div>
+          </div>
+          </div>
+          <div> | </div>
+
+                <div class="box">
+          <div class="instagram d-flex flex-column jusity-content-center align-items-center">
+            <li class=""><a href="#">Instagram</a>
+            </li>
+            <div class="line">
+            </div>
+          </div>
+                </div>
+
+                <div> | </div>
+
+                <div class="box">
+          <div class="instagram d-flex flex-column jusity-content-center align-items-center">
+            <li class=""><a href="#">LinkedIn</a>
+            </li>
+            <div class="line">
+            </div>
+          </div>
+          </div>
+        </div>
   </div>
 
+</div>
 
 
-  <form #form="ngForm" class="formClass col-sm-12 col-md-6">
+
+  <form #form="ngForm" class="formClass col-sm-12 col-md-5">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input [(ngModel)]="name" type="email" class="form-control" id="name" aria-describedby="emailHelp">
@@ -39,4 +79,9 @@
 
 
   </form>
+
+
+
 </div>
+
+

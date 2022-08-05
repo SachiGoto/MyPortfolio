@@ -20,6 +20,7 @@ import { TestComponent } from './test/test.component';
 
 
 
+
 @NgModule({
 
 
@@ -36,6 +37,7 @@ import { TestComponent } from './test/test.component';
     MyskillsComponent,
     NavbarComponent,
     TestComponent,
+
 
   ],
   imports: [

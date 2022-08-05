@@ -11,6 +11,9 @@ import { environment } from 'src/environments/environment';
 export class NavbarComponent implements OnInit {
   title = 'MyPortfolio';
   logo ='';
+  state:boolean=false;
+  activestate:boolean=false;
+
   server = environment.server;
   constructor(private cs:CommonService) { }
 
@@ -23,6 +26,15 @@ export class NavbarComponent implements OnInit {
       // console.log("logo url is" , this.logo)
 
     })
+  }
+
+
+  toggleNav() {
+    // let overlay =
+   this.state = !this.state;
+   this.activestate =!this.activestate;
+    let overlay = document.getElementById("overlay")
+
   }
 
 }
