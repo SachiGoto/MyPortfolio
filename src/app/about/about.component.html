@@ -526,7 +526,7 @@
       <div class="row">
         <div *ngFor="let skill of backendSkills" class="col-4">
             <div  class="toolicon" *ngIf="skill.attributes.Category === 'Backend development tools'">
-              <span class="tool" [attr.data-tip]="skill.attributes.SkillName">  <img [src]= "skill.attributes.SkillLogo.data.attributes.url"></span>
+              <span class="tool" [attr.data-tip]="skill.attributes.SkillName">  <img [src]= "skill.attributes.SkillLogo.data.attributes.url" alt={{skill.attributes.SkillLogo.alternativeText}}></span>
             </div>
            </div>
       </div>
@@ -550,7 +550,7 @@
     <li>Photoshop</li>
     <li>Illustrator</li>
     <li>Figma</li>
-    <li>Cloudinary</li>
+
   </ul>
 </div>
 

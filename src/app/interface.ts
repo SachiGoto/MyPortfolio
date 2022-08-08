@@ -49,6 +49,7 @@ export interface Skill{
 
           id:number;
           attributes:{
+
             SkillName:string;
             SkillScore:string;
             Category:string;
@@ -56,6 +57,7 @@ export interface Skill{
                 data:{
                   attributes:{
                     url:string,
+                    alternativeText:string;
                     formats:{
                       thumbnail:{
                         url:string;
@@ -126,7 +128,7 @@ export interface Projects{
 
 
 export interface ProjectDetail{
-data:[{
+// data:[{
   id:number;
   attributes:{
     Title:string;
@@ -155,7 +157,7 @@ data:[{
 
               }
 
-              }
+              },url:string;
           }
 
 
@@ -188,7 +190,7 @@ data:[{
               large:{
                 url:string
               }
-            }
+            },url:string;
           }
          }
         ]
@@ -196,8 +198,8 @@ data:[{
 
 }
 }
-]
-}
+// ]
+// }
 
 
 

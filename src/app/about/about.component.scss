@@ -44,7 +44,7 @@ $beige: #F1DFC5;
 
 
 
-@keyframes moveToRight{
+@keyframes aboutMoveToRight{
   0%{
    opacity:0;
    transform:translateX(-120%)
@@ -59,7 +59,7 @@ $beige: #F1DFC5;
 }
 
 
-@keyframes moveToLeft{
+@keyframes aboutMoveToLeft{
   0%{
    opacity:0;
   //  transform: translateY(-81%);
@@ -97,17 +97,17 @@ $beige: #F1DFC5;
   flex-direction:column;
   border-radius:10px;
   align-self: end;
-  animation: moveToRight 3s;
+  animation: aboutMoveToRight 3s;
   padding:2em 1em;
      p{
-      font-size:clamp(16px, 1.5vw ,25px);
+      font-size:clamp(16px, 1.2vw ,20px);
      }
 
 }
 
 .aboutMeImg{
   // height:50vh;
-  animation: moveToLeft 3s;
+  animation: aboutMoveToLeft 3s;
   transform:  translate(10px, -20px);
 
 
@@ -331,7 +331,7 @@ h2{
 
 //   .aboutMeImg{
 //     // height:50vh;
-//     // animation: moveToLeft 3s;
+//     // animation: aboutMoveToLeft 3s;
 //     transform: translate(-10%, -20%);
 //     margin-left:10%;
 //   }
@@ -416,7 +416,7 @@ h2{
 
   .aboutMeImg{
     // height:50vh;
-    // animation: moveToLeft 3s;
+    // animation: aboutMoveToLeft 3s;
     transform: translate(10px, -10px);
     // margin-left:10%;
 
@@ -427,9 +427,9 @@ h2{
 }
 
 
-@media(min-width:993px){
+@media(min-width:996px){
 
-  @keyframes moveToLeft{
+  @keyframes aboutMoveToLeft{
     0%{
      opacity:0;
     //  transform: translateY(-81%);
@@ -449,7 +449,7 @@ h2{
 
   .aboutMeImg{
     // height:50vh;
-    // animation: moveToLeft 3s;
+    // animation: aboutMoveToLeft 3s;
     transform: translate(-15px, -23px);
     // margin-left:10%;
   // .aboutMeContainer{
@@ -460,5 +460,20 @@ h2{
     width:100%;
   }
 }
+
+}
+
+
+@media(min-width:997px){
+
+  .aboutMeContent{
+
+    padding:2em 3em;
+    max-width:650px;
+
+
+  }
+
+
 
 }

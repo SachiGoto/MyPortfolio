@@ -21,6 +21,7 @@ export class ContactComponent implements OnInit {
   formMessageHidden = true;
 
   submitLead(){
+    console.log("Hello");
     this.formInvalid = true;
     let leaddata = {
       "data":{

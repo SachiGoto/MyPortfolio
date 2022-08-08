@@ -27,8 +27,21 @@ svg{
   left:0;
   width:100vw;
   height:100vh;
+  z-index:-1;
+  object-fit:cover;
+
+ }
+
+
+.videoBackground{
+  // position:absolute;
+  // top:0;
+  // left:0;
+  width:100vw;
+  height:100vh;
   // min-width:1020px;
   z-index:-1;
+  object-fit:cover;
 
  }
 
@@ -247,10 +260,13 @@ svg{
 }
 
 @keyframes moveToLeft{
-  from{
+  0%{
     transform: translate(0, 0);
-  }to{
+  }50%{
     transform:translate( -700px, 200px);
+  }100%{
+    transform: translate(0, 0);
+    opacity:0;
   }
 }
 
@@ -259,10 +275,13 @@ svg{
 }
 
 @keyframes moveToRight{
-  from{
+  0%{
     transform: translateX(0);
-  }to{
+  }50%{
     transform:translateX(300px);
+  }100%{
+    transform:translateX(0);
+    opacity:0;
   }
 }
 

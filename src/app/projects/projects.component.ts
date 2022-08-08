@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ProjectDetail, Projects } from '../interface';
 import { CommonService } from '../service/common.service';
-
+import { Router } from '@angular/router';
 import { gsap } from "gsap";
 import Draggable from "gsap/Draggable";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -15,12 +15,34 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-projects:any;
+projects:ProjectDetail[]=[];
 websiteHeroImage ='';
+
+state=false;
 
 server = environment.server;
 
-  constructor(private cs:CommonService) { }
+
+  constructor(private cs:CommonService, private route:Router) { }
+
+  translate(id:number, slug:any){
+
+    this.state = true;
+    console.log();
+
+
+
+    setTimeout(()=>{
+
+        this.route.navigate(['/projects/' + id + '/' + slug]);
+
+    }, 3000)
+
+
+
+
+    }
+
 
   ngOnInit(): void {
 

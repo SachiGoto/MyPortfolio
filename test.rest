@@ -3,9 +3,9 @@ Content-Type: application/json
 
 {
   "data":{
-    "name":"Test name from local",
-    "email":"test@test.com",
-    "message":"Some test message from local"
+    "name":"Test name from local 5th august",
+    "email":"test@test.commmmmmmm",
+    "message":"Some test message from local 5th august"
   }
 }
 
@@ -22,7 +22,7 @@ GET https://cms.sachigoto.me/api/project-news?populate=deep
 GET https://cms.sachigoto.me/api/about-me?populate=deep
 
 ###
-GET https://cms.sachigoto.me/api/project-news/1?populate=deep
+GET https://cms.sachigoto.me/api/project-news/2?populate=deep
 
 ###
 GET https://localhost:1337/api/about-me
