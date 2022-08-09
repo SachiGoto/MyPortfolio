@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "data":{
-    "name":"Test name from local 5th august",
+    "name":"Test August 9th",
     "email":"test@test.commmmmmmm",
     "message":"Some test message from local 5th august"
   }
