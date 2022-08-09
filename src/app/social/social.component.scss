@@ -23,6 +23,26 @@ li{
 }
 }
 
+.social{
+
+  li:hover{
+
+   animation: jump 1s;
+
+}
+
+}
+
+@keyframes jump{
+
+    from{
+
+        transform:translateY(0);
+    }to{
+      transform:translateY(-10px);
+    }
+}
+
 
 
 

@@ -5,6 +5,11 @@
 #navbarNav{
   width:100%;
   z-index: 5;
+
+   .nav-link{
+    font-weight:bold;
+    font-size:22px;
+   }
 }
 
 .navbar-nav{
@@ -55,6 +60,7 @@
   transform: translateY(11px) translateX(0) rotate(45deg);
   background: #732a34;
 }
+
 .button_container.active .middle {
   opacity: 0;
   background: #FFF;

@@ -30,6 +30,7 @@ export class AboutComponent implements OnInit {
   websiteHeroImage:string='';
   profileImage:string='';
   fullbio:any;
+  headshotAltText:string='';
 
   skills:Skill[]=[]
   designSkills:any =[];
@@ -77,6 +78,7 @@ export class AboutComponent implements OnInit {
           this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
 
           this.fullbio=res.data.attributes.FullBio;
+          this.headshotAltText = res.data.attributes.Headshot.data.attributes.alternativeText;
 
 
 

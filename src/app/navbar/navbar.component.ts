@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
   logo ='';
   state:boolean=false;
   activestate:boolean=false;
+  logoAltText = '';
 
   server = environment.server;
   constructor(private cs:CommonService) { }
@@ -21,7 +22,7 @@ export class NavbarComponent implements OnInit {
     this.cs.getAboutMe().subscribe(res=>{
       // this.logo = this.server + res.data.attributes.Logo.data.attributes.url;
       this.logo = res.data.attributes.Logo.data.attributes.url;
-
+      this.logoAltText = res.data.attributes.Logo.data.attributes.alternativeText;
 
       // console.log("logo url is" , this.logo)
 
@@ -33,6 +34,7 @@ export class NavbarComponent implements OnInit {
     // let overlay =
    this.state = !this.state;
    this.activestate =!this.activestate;
+
     let overlay = document.getElementById("overlay")
 
   }

@@ -14,6 +14,7 @@ export interface HomePage{
       Logo:{
         data:{
           attributes:{
+            alternativeText:string;
             url:string;
           }
         }
@@ -21,6 +22,7 @@ export interface HomePage{
       Headshot:{
         data:{
           attributes:{
+            alternativeText:string;
             formats:{
               large:{
                 url:string;
@@ -145,6 +147,7 @@ export interface ProjectDetail{
     MainImage:{
         data:{
           attributes:{
+            alternativeText:string;
             formats:{
               large:{
                 url:string;
@@ -172,7 +175,7 @@ export interface ProjectDetail{
             SkillLogo:{
               data:{
                 attributes:{
-
+                  alternativeText:string;
                     url:string;
 
                 }
@@ -186,6 +189,7 @@ export interface ProjectDetail{
   ;Images:{
          data:[{
           attributes:{
+            alternativeText:string;
             formats:{
               large:{
                 url:string

@@ -13,6 +13,10 @@ $beige: #F1DFC5;
    transform-origin:center center;
 }
 
+h1, h2{
+  font-weight:300;
+}
+
 
 @keyframes drawArc {
   0% { transform: rotate(-30deg) translateX(150px) ;}
@@ -196,20 +200,20 @@ svg{
 }
 
 
-@keyframes swing {
-  0% { transform: rotate(5deg);
-      //  transform-origin:5% -10%;
-                               }
-  100% { transform: rotate(-5deg);
-    // transform-origin:5% -10%;
+// @keyframes swing {
+//   0% { transform: rotate(5deg);
+//       //  transform-origin:5% -10%;
+//                                }
+//   100% { transform: rotate(-5deg);
+//     // transform-origin:5% -10%;
 
-  }
-}
+//   }
+// }
 
-@keyframes swing2 {
-  0% { transform: rotate(5deg); }
-  100% { transform: rotate(-5deg); }
-}
+// @keyframes swing2 {
+//   0% { transform: rotate(5deg); }
+//   100% { transform: rotate(-5deg); }
+// }
 
 
 .fieldandMountain{

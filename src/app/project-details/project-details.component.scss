@@ -11,12 +11,13 @@ $beige: #F1DFC5;
   height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
-@keyframes fadein {
-0%{opacity:0}
-100%{opacity:1}
-}
+// @keyframes fadein {
+// 0%{opacity:0}
+// 100%{opacity:1}
+// }
 
 .productDetailBackground{
   position:fixed;
@@ -33,6 +34,7 @@ $beige: #F1DFC5;
 
 
 .container{
+  height:80vh;
   // margin: 0;
   //   height: 100vh;
   //   padding: 0;
@@ -53,21 +55,7 @@ $beige: #F1DFC5;
 
 }
 
-@keyframes glow{
 
-   0%{
-    transform:scale(1);
-    opacity:1;
-
-   }50%{
-    transform:scale(1.5);
-    opacity:0.5;
-   }100%{
-    transform:scale(1);
-    opacity:1;
-   }
-
-}
 
 #cloud{
 
@@ -75,32 +63,7 @@ $beige: #F1DFC5;
 
 }
 
-@keyframes cloudmove{
 
-
-    0%{
-          transform:translate(0,0);
-          opacity:1;
-        }
-    25%{
-         transform:translate(20%, 5%);
-         opacity:0.5;
-    }
-
-    50%{
-         opacity:0;
-         transform:translate(60%, -5%);
-
-    }75%{
-         opacity:0.5;
-         transform:translate(20%,5%);
-    }
-    100%{
-      transform:translate(0,0);
-        opacity:1;
-    }
-
-}
 
 .developmentContainer{
   display:flex;
@@ -150,15 +113,7 @@ $beige: #F1DFC5;
      }
 }
 
-@keyframes tracedown{
-  0%{
-    height:0px;
-  }50%{
-      height:20px;
-  }100%{
-    height:0px;
-  }
-}
+
 
 .designContainer{
   display:flex;
@@ -310,16 +265,7 @@ $beige: #F1DFC5;
 
 
 
-  @keyframes show{
-      from{
-          opacity:0;
-          transform:scale(0.8) rotateX(30deg) ;
 
-      }to{
-          opacity:1;
-          transform:scale(1) rotateX(0deg);
-      }
-  }
 
 
 
@@ -409,25 +355,6 @@ $beige: #F1DFC5;
 
 
 
-@keyframes floatButton1{
-  0%{
-    transform:translateY(0)
-  }50%{
-    transform:translateY(10px)
-  }100%{
-    transform:translateY(0)
-  }
-}
-
-@keyframes floatButton2{
-  0%{
-    transform:translateY(0px)
-  }50%{
-    transform:translateY(-10px)
-  }100%{
-    transform:translateY(0px)
-  }
-}
 
 
 .footer{
@@ -527,10 +454,58 @@ $beige: #F1DFC5;
 
 @media(min-width:997px){
 
+  .developmentContainer{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+
+       div{
+        margin-top:0%;
+           p{
+               width:70%;
+               margin:0 auto;
+           }
+       }
+
+
+       .titleContainer{
+        position:fixed;
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+        h1{
+          // position:fixed;
+          // top:50%;
+          // left:50%;
+          // transform:translate(-50%,-50%)
+          font-size:clamp(25px, 3.5vw, 35px);
+        }
+        h2{
+          // position:fixed;
+          // top:57%;
+          // left:50%;
+          // transform:translate(-50%,-57%)
+          font-size:clamp(20px, 3.3vw, 30px);
+        }
+
+        p{
+          font-size:clamp(10px, 3.5vw, 16px);
+        }
+
+        .projectArrow{
+          animation:tracedown 3s infinite ease-in-out;
+          transform:rotate(90deg);
+
+        }
+       }
+  }
+
   .designContainer{
     display:flex;
     flex-direction:row;
-    padding-top:10vw;
+    padding-top:0vw;
 
 
      div{

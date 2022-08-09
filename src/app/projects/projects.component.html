@@ -205,7 +205,7 @@
      <div class="project" *ngFor="let project of projects">
        <h2>{{project.attributes.Title}}</h2>
 
-       <p>{{project.attributes.Title| json}}</p>
+       <!-- <p>{{project.attributes.Title| json}}</p> -->
        <div class="projectImageContainer">
 
 
@@ -213,7 +213,7 @@
         <button target="_blank" class="detailBtn" (click)="translate(project.id, project.attributes.Slug)">Details</button>
         <!-- <a  target="_blank" [routerLink]="['/projects', project.id, project.attributes.Slug]"> -->
           <!-- <img [src]=" server + project.attributes.MainImage.data.attributes.formats.medium.url"> -->
-           <img [src]="project.attributes.MainImage.data.attributes.formats.medium.url">
+           <img [src]="project.attributes.MainImage.data.attributes.formats.medium.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText">
 
         <!-- </a> -->
       </div>
@@ -230,7 +230,7 @@
 
              <!-- {{skill | json}}  -->
             <!-- <img class="logoimage" [src]="server + skill.attributes.SkillLogo.data.attributes.url"> -->
-           <span class="tool" [attr.data-tip]="skill.attributes.SkillName"> <img class="logoimage"  [src]="skill.attributes.SkillLogo.data.attributes.url"></span>
+           <span class="tool" [attr.data-tip]="skill.attributes.SkillName"> <img class="logoimage"  [src]="skill.attributes.SkillLogo.data.attributes.url" [alt]="skill.attributes.SkillLogo.data.attributes.alternativeText"></span>
           </li>
         </ul>
       </div>

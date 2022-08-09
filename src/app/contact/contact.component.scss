@@ -109,6 +109,29 @@ left:0;
 
 }
 
+#threeflowers{
+
+
+  #flower1{
+    transform-box:fill-box;
+    transform-origin: bottom center;
+    animation: swing ease-in-out 4s infinite alternate;
+  }
+
+  #flower2{
+    transform-box:fill-box;
+    transform-origin: bottom center;
+    animation: swing2 ease-in-out 4s infinite alternate;
+  }
+
+  #flower3{
+    transform-box:fill-box;
+    transform-origin: bottom center;
+    animation: swing ease-in-out 4s infinite alternate;
+    animation-delay:1s;
+  }
+}
+
 
 @keyframes animate{
 
