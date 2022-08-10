@@ -210,7 +210,7 @@
 
 
       <div class="projectImage">
-        <button target="_blank" class="detailBtn" (click)="translate(project.id, project.attributes.Slug)">Details</button>
+        <button target="_blank" class="detailBtn-desktop d-none d-lg-block"  (click)="translate(project.id, project.attributes.Slug)">Details</button>
         <!-- <a  target="_blank" [routerLink]="['/projects', project.id, project.attributes.Slug]"> -->
           <!-- <img [src]=" server + project.attributes.MainImage.data.attributes.formats.medium.url"> -->
            <img [src]="project.attributes.MainImage.data.attributes.formats.medium.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText">
@@ -221,6 +221,7 @@
         </div>
        <h4>{{project.attributes.Tagline}}</h4>
       <p class="summary">{{project.attributes.Summary}}</p>
+      <button target="_blank" class="detailBtn-mobile d-lg-none"  (click)="translate(project.id, project.attributes.Slug)">Details</button>
 
       <div class="skillsContainer">
 

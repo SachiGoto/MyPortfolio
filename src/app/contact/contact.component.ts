@@ -37,14 +37,21 @@ export class ContactComponent implements OnInit {
 
 
 
+
+
     })
 
-
-
-
-
     console.log(leaddata);
+
+    this.name='';
+  this.email='';
+  this.message='';
+
+
+
   }
+
+
 
   resolved(event:any){
       // console.log(event);

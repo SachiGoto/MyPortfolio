@@ -71,8 +71,12 @@ $beige: #F1DFC5;
   flex-direction:column;
   align-items:center;
 
+    .icons{
+      width: 100vw;
+    }
+
      div{
-      margin-top:5%;
+      // margin-top:5%;
          p{
              width:70%;
              margin:0 auto;
@@ -181,7 +185,7 @@ $beige: #F1DFC5;
   .projectGithubIcon{
 
       text-align:center;
-      margin:0 3%;
+      margin:0 5%;
   }
 
 }

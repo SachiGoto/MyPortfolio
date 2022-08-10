@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 
 
 
+
 const routes: Routes = [
   {path:"home", component:HomeComponent},
   {path:"", component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
    {path:"navbar", component:NavbarComponent},
 
    {path:"ecommerce", component:HomeComponent},
+
 
 
 ];

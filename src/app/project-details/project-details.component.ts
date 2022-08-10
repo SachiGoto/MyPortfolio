@@ -63,7 +63,7 @@ console.log("project is " , this.project)
 
   Aos.init();
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
   // this.http.getAboutMe().subscribe(res=>{
   //   console.log(res);
@@ -107,7 +107,7 @@ ngAfterViewChecked(){
       pin: false,
       start: '0 center',
       end: '0 bottom',
-      markers: true,
+      markers: false,
       toggleActions: 'play none none reverse',
     },
   });
@@ -118,6 +118,8 @@ ngAfterViewChecked(){
     }
 
 
+
+}
 
 }
 
@@ -140,7 +142,7 @@ ngAfterViewChecked(){
 //     scrollBox.from(titleContainer, { opacity: 0, duration:2});
 
 // }
-}
+
 
 
 //       //  let websitepages = angular.element(document.querySelectorAll(".image"));
