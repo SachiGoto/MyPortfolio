@@ -126,6 +126,25 @@
   }
 }
 
+.langBtn{
+  min-height:45px;
+  min-width:175px;
+  // background-color:$orange;
+  background-color:var(--beige);
+  // width:65%;
+  // color:$beige;
+  color : var(--orange);
+  border:none;
+  font-weight:bold;
+  border-radius:30px;
+  // padding:1em 2em;
+  // margin-top:5%;
+  // animation:float 5s infinite;
+  position:absolute;
+  top:10vh;
+  right:10vh;
+}
+
 
 .buttons{
   width:100%;

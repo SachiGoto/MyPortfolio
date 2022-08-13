@@ -440,25 +440,58 @@
 <app-navbar class="navBar"></app-navbar>
 
 
-<div class="mainContainer">
-      <div class="aboutMeContainer row">
-        <div class="aboutMeContent centercenter col-12 col-md-10 col-lg-7">
+
+
+  <button class="langBtn" (click)="changeLang()">EN/JP</button>
+  <div class="mainContainer">
+      <div  *ngIf="lang === 'English'; then english else japanese"></div>
+
+        <ng-template #english >
+          <div class="aboutMeContainer row">
+            <div class="aboutMeContent centercenter col-12 col-md-10 col-lg-7">
+              <h2>About me</h2>
+              <!-- <a class="page-scroll link-underline-menu" (click)="scroll($event, about)" href="#about">About</a> -->
+                       <p [innerHTML]="fullbio"></p>
+              <!-- <div class="zerowasteContainer" [innerHTML]="whyZeroWaste"></div> -->
+            </div>
+              <div class="aboutMeImg col-10 col-md-8 col-lg-4">
+                <div class="d-flex flex-column jusity-content-center align-items-end">
+                  <img [src]="profileImage" [alt]="headshotAltText">
+                </div>
+               </div>
+
+          </div>
+        </ng-template>
+
+        <ng-template #japanese>
+          <div class="aboutMeContainer row">
+            <div class="aboutMeContent centercenter col-12 col-md-10 col-lg-7">
           <h2>About me</h2>
           <!-- <a class="page-scroll link-underline-menu" (click)="scroll($event, about)" href="#about">About</a> -->
-         <p [innerHTML]="fullbio"></p>
-
-          <!-- <div class="zerowasteContainer" [innerHTML]="whyZeroWaste"></div> -->
-
+         <p>カナダ、バンクーバーにあるメデイア系の学校、VanArtsで、WEBデベロップ＆デザイン学科を専攻しました。現在は、ウェブ関係のお仕事を探しています。テクノロジーと社会の影響に興味があります。
+          テクノロジー以外では、お菓子作りと環境に気を配る生活に興味があります。
+         </p>
         </div>
-        <div class="aboutMeImg col-10 col-md-8 col-lg-4">
+         <div class="aboutMeImg col-10 col-md-8 col-lg-4">
           <div class="d-flex flex-column jusity-content-center align-items-end">
             <img [src]="profileImage" [alt]="headshotAltText">
 
           </div>
          </div>
 
+         </div>
 
-      </div>
+          <!-- <div class="zerowasteContainer" [innerHTML]="whyZeroWaste"></div> -->
+
+        </ng-template>
+
+
+
+
+
+
+
+</div>
 
 
       <div class="buttons">
@@ -487,7 +520,7 @@
     </div>
 
 
-  </div>
+</div>
 
 <div class="c" id="c">
 
@@ -584,7 +617,7 @@
 
 <div class="btnContainer centercenter" routerLink="/projects"><button class="btn">Projects</button></div>
 
-</div>
+
 
 <!-- <app-contact id="contact"></app-contact> -->
 

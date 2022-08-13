@@ -40,8 +40,17 @@ export class AboutComponent implements OnInit {
 
   education:Education[]=[];
 
+  lang:string="English";
 
+  changeLang(){
+    if(this.lang=="English"){
 
+      this.lang = "Japanese"
+
+    }else{
+      this.lang = "English";
+    }
+  }
 
 
 
