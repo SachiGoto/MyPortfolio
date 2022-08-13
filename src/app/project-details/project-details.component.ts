@@ -48,6 +48,17 @@ scrollup(){
 }
 
 
+
+scrollTo(summary:any){
+
+
+  summary.scrollIntoView({
+  behavior: "smooth",
+  block:"center",
+  inline: "start"
+});
+}
+
   ngOnInit(): void {
 
     window.scrollTo(0,0);

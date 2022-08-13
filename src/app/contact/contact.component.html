@@ -3,12 +3,13 @@
 
 <!-- <div class="background" style="background-image:url(../../assets/wallpaper/portfoliowallpaperNight.svg)"></div> -->
 
-
 <svg class="bg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 2145 1179" fill="none" xmlns="http://www.w3.org/2000/svg">
+
   <g id="portfolio_bg_003d891baf (1) 1" clip-path="url(#clip0_5_908)">
   <g id="sky">
   <path id="Vector" d="M2143.65 2.23438H-2.23413V1205.5H2143.65V2.23438Z" fill="#278AC1"/>
   </g>
+
   <g id="mountain2">
   <path id="Vector_2" d="M1141.2 587.97C1152.36 573.2 1172.12 545.045 1195.47 537.85C1218.51 530.756 1237.76 527.46 1271.18 521.729C1284.61 519.427 1359.09 514.824 1381.08 505.607C1412.16 492.58 1413.67 482.379 1440.91 450.348C1460.04 427.847 1487.02 393.257 1510.51 390.487C1530.05 388.185 1535.25 395.436 1554.47 388.185C1566.68 383.582 1563.41 376.231 1620.41 332.926C1644.67 314.492 1667.93 309.464 1683.9 307.598C1696.1 306.18 1706.9 311.945 1725.42 312.202C1753.61 312.593 1770.26 300.258 1781.59 296.08C1808.03 286.326 1808.26 280.695 1825.55 275.355C1861.52 264.25 1886.43 288.203 1940.99 318.57C1953.11 325.318 1950.23 324.357 1956.87 327.776C2013.57 357.025 2055.29 335.429 2075.87 328.312C2116.63 314.201 2150.36 302.984 2150.36 302.984V719.726C2150.36 719.726 1153.95 735.848 1140.53 728.932" fill="#1EB390"/>
   </g>
@@ -190,82 +191,100 @@
   </defs>
   </svg>
   <app-navbar class="navBar"></app-navbar>
-<div class="contactContainer row">
+  <!-- <div class="main">
+    <div class="stars">
+      <div class="star"></div>
+    </div>
+  </div> -->
 
 
-  <div class="contactContent col-sm-12 col-md-6 d-frex flex-column">
 
-    <h2 class="containerTitle">Get in touch! </h2>
+<div class="mainContainer">
+  <div class="contactContainer row">
+    <div class="contactContent col-sm-10 mt-sm-5 col-md-6 d-frex flex-column">
 
-    <div class="contactVia">
-      You can also reach me via <br>
+      <h2 class="containerTitle">Get in touch! </h2>
+
+      <div class="contactVia">
+        You can also reach me via <br>
 
 
-        <div class="d-flex justify-content-center">
-          <div class="box">
-            <div class="email d-flex flex-column jusity-content-center align-items-center">
-            <li class=""><a href="#">Email</a>
-            </li>
-            <div class="line">
+          <div class="d-flex justify-content-center">
+            <div class="box">
+              <div class="email">
+              <!-- <li class=""><a href="#"><img src="../../assets/logos/emailicon.png" width="30"></a>
+              </li> -->
+              <li class=""><a href="mailto:{{aboutme.attributes.Email}} " target="_blank"><img [src]="emailIcon" width="30"></a>
+
+              </li>
+              <!-- <div class="line">
+              </div> -->
+            </div>
+            </div>
+            <div class="lineContainer" >
+              <!-- <div class="line"> | </div> -->
+            </div>
+
+                  <div class="box">
+            <div class="instagram">
+              <!-- <li class=""><a href="#"><img src="../../assets/logos/Instagram_Glyph_Gradient.png" width="30"></a>
+
+              </li> -->
+              <li class=""><a href="{{aboutme.attributes.Instagram}}" target="_blank"><img [src]="instagramIcon" width="30"></a>
+              </li>
+              <!-- <div class="line">
+              </div> -->
+            </div>
+                  </div>
+
+                  <div class="lineContainer" >
+                    <!-- <div class="line"> | </div> -->
+                  </div>
+
+                  <div class="box">
+            <div class="linkedin">
+              <li class=""><a href="{{aboutme.attributes.LinkedIn}}" target="_blank"><img [src]="linkedinIcon" width="30"></a>
+              </li>
+              <!-- <div class="line">
+              </div> -->
+            </div>
             </div>
           </div>
-          </div>
-          <div> | </div>
+    </div>
 
-                <div class="box">
-          <div class="instagram d-flex flex-column jusity-content-center align-items-center">
-            <li class=""><a href="#">Instagram</a>
-            </li>
-            <div class="line">
-            </div>
-          </div>
-                </div>
-
-                <div> | </div>
-
-                <div class="box">
-          <div class="instagram d-flex flex-column jusity-content-center align-items-center">
-            <li class=""><a href="#">LinkedIn</a>
-            </li>
-            <div class="line">
-            </div>
-          </div>
-          </div>
-        </div>
   </div>
 
-</div>
+
+
+    <form #form="ngForm" class="formClass col-sm-12 col-md-5">
+      <div class="mb-3">
+        <!-- <label for="name" class="form-label">Name</label> -->
+        <input [(ngModel)]="name" name="name" type="text"  placeholder="Name" class="form-control" id="name" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <!-- <label for="email" class="form-label">Email address</label> -->
+        <input [(ngModel)]="email" name="email"  type="email" class="form-control" placeholder="Email"  id="email" aria-describedby="emailHelp">
+
+      </div>
+      <div class="form-group">
+        <!-- <label for="message">Comments</label> -->
+        <textarea [(ngModel)]="message" name="message" placeholder="Message"  class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <div class="mt-3">
+        <re-captcha (resolved)="resolved($event)" siteKey="6LcbP-cgAAAAAK6KiBfA0OFIhmV5XIj7aMnth4MH" class="mt-3"></re-captcha>
+      </div>
+      <button (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary mt-3">Send</button>
+
+      <div class="mt-3" [hidden]="formMessageHidden">
+        Thank you for contacting me, {{name}}. I will get in touch with you soon!
+      </div>
+
+
+    </form>
 
 
 
-  <form #form="ngForm" class="formClass col-sm-12 col-md-5">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input [(ngModel)]="name" name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email address</label>
-      <input [(ngModel)]="email" name="email"  type="email" class="form-control" id="email" aria-describedby="emailHelp">
-
-    </div>
-    <div class="form-group">
-      <label for="message">Comments</label>
-      <textarea [(ngModel)]="message" name="message" class="form-control" id="message" rows="3"></textarea>
-    </div>
-    <div class="mt-3">
-      <re-captcha (resolved)="resolved($event)" siteKey="6LcbP-cgAAAAAK6KiBfA0OFIhmV5XIj7aMnth4MH" class="mt-3"></re-captcha>
-    </div>
-    <button (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary mt-3">Send</button>
-
-    <div class="mt-3" [hidden]="formMessageHidden">
-      Thank you for contacting me, {{name}}. I will get in touch with you soon!
-    </div>
-
-
-  </form>
-
-
-
+  </div>
 </div>
 
 

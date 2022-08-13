@@ -11,6 +11,7 @@ export interface HomePage{
       LinkedIn:string;
       Github:string;
       Behance:string;
+      Instagram:string;
       Logo:{
         data:{
           attributes:{
@@ -40,6 +41,56 @@ export interface HomePage{
           }
         }
       }
+      LinkedinIcon:{
+        data:{
+          attributes:{
+           url:string;
+           alternativeText:string;
+
+          }
+
+        }
+      }
+      GithubIcon:{
+        data:{
+          attributes:{
+            url:string;
+            alternativeText:string;
+
+           }
+
+        }
+      }
+      EmailIcon:{
+        data:{
+          attributes:{
+            url:string;
+            alternativeText:string;
+
+           }
+
+        }
+      }
+      BehanceIcon:{
+        data:{
+          attributes:{
+            url:string;
+            alternativeText:string;
+
+           }
+
+        }
+      }
+      InstagramIcon: {
+        data:{
+        attributes:{
+          url:string;
+          alternativeText:string;
+
+         }
+      }
+    }
+
     }
   }
 }

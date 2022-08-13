@@ -5,6 +5,8 @@
 $orange: #E9672D;
 $beige: #F1DFC5;
 
+html{scroll-behavior: smooth;}
+
 .projectDetailContainer{
   animation: fadein 3s;
   width: 100vw;
@@ -111,7 +113,7 @@ $beige: #F1DFC5;
 
       .projectArrow{
         animation:tracedown 3s infinite ease-in-out;
-        transform:rotate(90deg);
+        // transform:rotate(90deg);
 
       }
      }
@@ -300,14 +302,17 @@ $beige: #F1DFC5;
   $primary: rgb(6, 4, 95);
   $secondary: rgb(200, 226, 93);
 
-.visitBtn{
+.visitBtn, .summaryBtn{
 
+  display:flex;
+  justify-content:center;
+  align-items:center;
   a{
     color: #ffffff;
     text-decoration:none;
   }
   // width:25%;
-  margin:0 2%;
+  margin:2% 2%;
   // display:flex;
   // justify-content:center;
   // margin-top:10%;
@@ -316,7 +321,7 @@ $beige: #F1DFC5;
   border:none;
 	padding: .75rem 1.25rem;
 	border-radius: 10rem;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-size: 1rem;
 	letter-spacing: .15rem;
 	transition: all .3s;
@@ -426,9 +431,19 @@ $beige: #F1DFC5;
 }
 }
 
-.arrow{
-  transform: rotate(270deg);
+// .arrow{
+//   transform: rotate(270deg);
 
+// }
+.visitArrow{
+  animation:tracedown 3s infinite ease-in-out;
+  transform:rotate(0deg);
+
+}
+
+.summaryArrow{
+  transform: rotate(90deg);
+  animation:tracedown 3s infinite ease-in-out;
 }
 
 @media(min-width:768px){
@@ -498,7 +513,7 @@ $beige: #F1DFC5;
           font-size:clamp(10px, 3.5vw, 16px);
         }
 
-        .projectArrow{
+        .Arrow{
           animation:tracedown 3s infinite ease-in-out;
           transform:rotate(90deg);
 
