@@ -19,7 +19,14 @@ export interface HomePage{
             url:string;
           }
         }
-      },
+      }
+      Resume:{
+         data:{
+          attributes:{
+            url:string;
+          }
+         }
+      }
       Headshot:{
         data:{
           attributes:{
@@ -272,6 +279,7 @@ export interface Education {
       id:string;
       attributes:{
         School:string;
+        Title:string;
         Startdate:string;
         Enddate:string;
         Note:string;

@@ -31,6 +31,7 @@ export class AboutComponent implements OnInit {
   profileImage:string='';
   fullbio:any;
   headshotAltText:string='';
+  resume:string='';
 
   skills:Skill[]=[]
   designSkills:any =[];
@@ -88,6 +89,7 @@ export class AboutComponent implements OnInit {
 
           this.fullbio=res.data.attributes.FullBio;
           this.headshotAltText = res.data.attributes.Headshot.data.attributes.alternativeText;
+          this.resume = res.data.attributes.Resume.data.attributes.url;
 
 
 
@@ -109,6 +111,7 @@ export class AboutComponent implements OnInit {
           this.temp = res.data.filter(designSkill => {
             if(designSkill.attributes.Category === "Design tools"){
               this.designSkills.push(designSkill)
+
 
               }
           })

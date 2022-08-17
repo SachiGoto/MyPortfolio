@@ -116,7 +116,7 @@ ngAfterViewChecked(){
     scrollTrigger: {
       trigger: container,
       pin: false,
-      start: '0 center',
+      start: '-200 center',
       end: '0 bottom',
       markers: false,
       toggleActions: 'play none none reverse',

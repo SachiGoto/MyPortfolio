@@ -53,8 +53,19 @@ body{
 
 
 .formClass{
+  width:95%;
   max-width:500px;
-  padding:50px;
+  padding:25px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+     div{
+      width:100%;
+
+     }
+
 }
 
 .background{
@@ -232,10 +243,22 @@ left:0;
     .contactContent{
       background-color:rgba(255, 255, 255,0.8);
     }
+
+    .contactConent{
+      width:50%;
+      // margin-top:0 !important;
+
+    }
+
+    .formClass{
+      width:50%;
+
+    }
+
+
 }
 
-@media(max-width:826px){
-  .formClass{
-    width:80%;
-  }
-}
+
+
+
+
