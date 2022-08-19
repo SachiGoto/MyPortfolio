@@ -60,21 +60,25 @@ svg{
 
 #mountain1{
 
-  animation: moveup 5s infinite ease-in-out;
+  animation: moveup 5s  ease-in-out;
 
 }
 
 #mountain2{
 
-  animation: moveup 5s infinite ease-in-out;
+  animation: moveup 5s  ease-in-out;
   animation-delay:1s;
 
 }
 #mountain3{
 
-  animation: moveup2 3s infinite ease-in-out;
+  animation: moveup2 3s  ease-in-out;
 
 }
+
+// #mountain4{
+//   animation:fadeout 3s  ease-in-out;
+// }
 
 
 
@@ -250,7 +254,7 @@ svg{
   }
 
   to{
-    transform:scale(2.0) translateY(100px);
+    transform:scale(2.0) translateY(170px);
     // opacity:0
   }
 }
@@ -266,12 +270,21 @@ svg{
 @keyframes moveToLeft{
   0%{
     transform: translate(0, 0);
+    opacity:1;
   }50%{
     transform:translate( -700px, 200px);
+    opacity:0;
+
+  }70%{
+     opacity:0;
   }100%{
     transform: translate(0, 0);
     opacity:0;
   }
+}
+
+.fadeout{
+  animation:fadeout 10s
 }
 
 .moveToRight{
@@ -283,7 +296,13 @@ svg{
     transform: translateX(0);
   }50%{
     transform:translateX(300px);
-  }100%{
+    opacity:0;
+  }75%{
+    opacity:0;
+    opacity:0;
+  }
+
+  100%{
     transform:translateX(0);
     opacity:0;
   }
@@ -347,11 +366,6 @@ svg{
 
 @media only screen and (max-width: 768px) {
 
-  svg{
-
-    // left:-30%;
-
-  }
 
 
   .titleContainer{

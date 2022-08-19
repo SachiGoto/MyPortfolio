@@ -16,6 +16,7 @@ import { RecaptchaModule } from "ng-recaptcha";
 import { MyskillsComponent } from './myskills/myskills.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StarsComponent } from './stars/stars.component';
 
 
 
@@ -37,6 +38,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SocialComponent,
     MyskillsComponent,
     NavbarComponent,
+    StarsComponent,
 
 
 

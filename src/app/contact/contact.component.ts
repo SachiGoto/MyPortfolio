@@ -21,9 +21,13 @@ export class ContactComponent implements OnInit {
   linkedinIcon='';
   instagramIcon ='';
   aboutme:any;
+ component = "contact"
+
 
 
   formMessageHidden = true;
+
+
 
   submitLead(){
     console.log("Hello");
@@ -69,12 +73,73 @@ export class ContactComponent implements OnInit {
 
 
 
+
+
+
+
+
   ngOnInit(): void {
+
+
 
 
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
+
+
+  //   let getDivState = () => {
+  //     let currentState = { width: document.body.clientWidth,
+  //                          height: document.body.clientHeight
+  //                        }
+  //   return currentState;
+  // }
+
+
+
+
+  //     let getRanNum = (min:any, max:any) => {
+  //       let draw;
+  //       do {
+  //         draw = Math.floor(Math.random() * max);
+  //       } while (draw > max || draw < min)
+  //       return draw;
+  //     }
+
+  //     let starContainer = document.createElement("div");
+
+  //     // starContainer.className = "starContainer";
+  //     starContainer.style.height = "100vh";
+  //     starContainer.style.position = "absolute";
+  //     starContainer.style.width = "100%";
+  //     starContainer.style.top = "0";
+  //     document.body.appendChild(starContainer);
+
+  //     // let createStars = () => {
+
+  //     let stars = getDivState().width / 50 ;  // the mass of the stars
+
+  //     for (let i=1; i<=stars; i++) { // create stars limit by screen size
+  //       let star = document.createElement("div");
+
+  //       star.className = "star";
+  //       let sizeOfStar = getRanNum(5, 7);
+  //       star.style.borderRadius = "10px";
+  //       star.style.position = "absolute";
+  //       star.style.animation = "twinkle 3s infinite";
+  //       star.style.backgroundColor = "rgb(232, 248, 167)"
+  //       // star.style.filter.blink = "10px";
+  //       star.style.width = sizeOfStar + "px";
+  //       star.style.height = sizeOfStar + "px";
+  //       // star.style.height = Math.floor(Math.random()*10 + 1) + "vh";
+  //       star.style.left= getRanNum(0, getDivState().width) +"px";
+  //       star.style.top= Math.floor(Math.random()*25 + 1) + "vh";
+  //       star.style.animationDuration= getRanNum(3, 8) + "s";
+  //       // star.style.backgroundColor="yellow";
+  //       starContainer.appendChild(star);
+  //     }
+
+  //   // }
 
     this.http.getAboutMe().subscribe(res=>{
       console.log("res is " , res.data.attributes);
@@ -88,7 +153,7 @@ export class ContactComponent implements OnInit {
       this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
       this.instagramIcon = res.data.attributes.InstagramIcon.data.attributes.url;
 
-
+    })
       // this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
 
       // this.fullbio=res.data.attributes.FullBio;
@@ -98,47 +163,47 @@ export class ContactComponent implements OnInit {
 
 
 
-    })
 
-    let getDivState = () => {
-      let currentState = { width: document.body.clientWidth,
-                           height: document.body.clientHeight
-                         }
-    return currentState;
-  }
+  //   let getDivState = () => {
+  //     let currentState = { width: document.body.clientWidth,
+  //                          height: document.body.clientHeight
+  //                        }
+  //   return currentState;
+  // }
 
-    // let createStars = () => {
-      let starContainer = document.createElement("div");
+  //   // let createStars = () => {
+  //     let starContainer = document.createElement("div");
 
-      let getRanNum = (min:any, max:any) => {
-        let draw;
-        do {
-          draw = Math.floor(Math.random() * max);
-        } while (draw > max || draw < min)
-        return draw;
-      }
 
-      starContainer.className = "starContainer";
-      starContainer.style.height = "20vh";
-      document.body.appendChild(starContainer);
-      let stars = getDivState().width / 50 ;  // the mass of the stars
+  //     let getRanNum = (min:any, max:any) => {
+  //       let draw;
+  //       do {
+  //         draw = Math.floor(Math.random() * max);
+  //       } while (draw > max || draw < min)
+  //       return draw;
+  //     }
 
-      for (let i=1; i<=stars; i++) { // create stars limit by screen size
-        let star = document.createElement("div");
+  //     starContainer.className = "starContainer";
+  //     starContainer.style.height = "20vh";
+  //     document.body.appendChild(starContainer);
+  //     let stars = getDivState().width / 50 ;  // the mass of the stars
 
-        star.className = "star";
-        let sizeOfStar = getRanNum(5, 7);
-        star.style.borderRadius = "10px";
-        // star.style.filter.blink = "10px";
-        star.style.width = sizeOfStar + "px";
-        star.style.height = sizeOfStar + "px";
-        // star.style.height = Math.floor(Math.random()*10 + 1) + "vh";
-        star.style.left= getRanNum(0, getDivState().width) +"px";
-        star.style.top= Math.floor(Math.random()*25 + 1) + "vh";
-        star.style.animationDuration= getRanNum(3, 8) + "s";
-        // star.style.backgroundColor="yellow";
-        starContainer.appendChild(star);
-      }
+  //     for (let i=1; i<=stars; i++) { // create stars limit by screen size
+  //       let star = document.createElement("div");
+
+  //       star.className = "star";
+  //       let sizeOfStar = getRanNum(5, 7);
+  //       star.style.borderRadius = "10px";
+  //       // star.style.filter.blink = "10px";
+  //       star.style.width = sizeOfStar + "px";
+  //       star.style.height = sizeOfStar + "px";
+  //       // star.style.height = Math.floor(Math.random()*10 + 1) + "vh";
+  //       star.style.left= getRanNum(0, getDivState().width) +"px";
+  //       star.style.top= Math.floor(Math.random()*25 + 1) + "vh";
+  //       star.style.animationDuration= getRanNum(3, 8) + "s";
+  //       // star.style.backgroundColor="yellow";
+  //       starContainer.appendChild(star);
+  //     }
     // }
 
     // get the current div width and height

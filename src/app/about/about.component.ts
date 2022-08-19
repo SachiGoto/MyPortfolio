@@ -59,6 +59,9 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+
+
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
@@ -181,7 +184,7 @@ export class AboutComponent implements OnInit {
         scrollTrigger: {
           trigger: container,
           pin: false,
-          start: '-250px center',
+          start: '-150px center',
           end: 'bottom bottom',
           markers: false,
           toggleActions: 'play none none reverse',
@@ -192,6 +195,33 @@ export class AboutComponent implements OnInit {
 
    }
 
+  //  ngAfterViewChecked(){
+
+    // document.body.childNodes[13].remove()
+    // console.log()
+
+    // let starContainer = document.querySelector(".educationContainer");
+    // console.log("star container is " , starContainer);
+    // let stars = document.querySelectorAll(".star");
+    // console.log("star  is " , starContainer);
+    // if(starContainer){
+    // starContainer.classList.remove("starContainer");
+
+    // stars.forEach(star=>{
+    //  star.classList.remove("star");
+    // })
+
+    // }
+
+
+      // }
+
 
 
 }
+
+
+
+
+
+

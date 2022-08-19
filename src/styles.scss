@@ -17,28 +17,31 @@
 
 }
 
+
+
 :root
 {
 
-  .starContainer{
-    width: 100%;
-    height: 30vh;
+//   .starContainer{
+//   width: 100%;
+//   height: 100vh;
+//   position: absolute;
+//   top:0;
+// }
 
-    position: absolute;
-    top:5vh;;
-  }
+// .star {
+//   position: absolute;
+//   width:10px;
+//   height: 10px;
+//   background-color: rgb(232, 248, 167);
+//   animation-name: twinkle;
+//   animation-duration: 3s;
+//   animation-iteration-count: infinite;
+//   filter:blur(1px);
+//   z-index:200;
+// }
 
-  .star {
-    position: absolute;
-    width:10px;
-    height: 10px;
-    background-color: rgb(232, 248, 167);
-    animation-name: twinkle;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    filter:blur(1px);
-    z-index:200;
-  }
+
   --hello: #10ae28; // or any global you wish to share with components
 
 --orange: #E9672D;
@@ -104,6 +107,14 @@
   0%{opacity:0.5}
   100%{opacity:1}
 }
+
+
+@keyframes fadeout {
+  0%{opacity:1}
+  50%{opacity:0.5}
+  100%{opacity:1}
+}
+
 
 @keyframes swing {
   0% { transform: rotate(5deg);

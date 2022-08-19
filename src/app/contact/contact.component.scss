@@ -21,23 +21,66 @@ body{
   box-sizing:border-box;
 }
 
-.starContainer{
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top:0;
+// .starContainer{
+//   width: 100%;
+//   height: 100vh;
+//   position: absolute;
+//   top:0;
+// }
+
+// .star {
+//   position: absolute;
+//   width:10px;
+//   height: 10px;
+//   background-color: rgb(232, 248, 167);
+//   animation-name: twinkle;
+//   animation-duration: 3s;
+//   animation-iteration-count: infinite;
+//   filter:blur(1px);
+//   z-index:200;
+// }
+
+#cloud{
+  transform: translate(-20%,-2%);
 }
 
-.star {
-  position: absolute;
-  width:10px;
-  height: 10px;
-  background-color: rgb(232, 248, 167);
-  animation-name: twinkle;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  filter:blur(1px);
-  z-index:200;
+#moon{
+
+
+  transform-box:fill-box;
+  // transform:translateY(-77%);
+
+  animation:tilt 5s infinite ease-in-out;
+  // animation-delay:5s;
+  // animation-iteration-count: infinite;
+  transform-origin:center center;
+  // transform:translateY(10%);
+
+}
+
+@keyframes tilt{
+
+  0%{
+    // transform:translateY(-77%);
+    transform:rotate(0) translateY(-77%);
+
+  }
+  45%{
+    transform:rotate(0) translateY(-77%)
+  }
+  50%{
+    // transform:translateY(-77%);
+    transform:rotate(5deg) translateY(-77%)
+  }
+  55%{
+    transform:rotate(0deg) translateY(-77%)
+  }
+
+  100%{
+
+    transform:rotate(0) translateY(-77%)
+  }
+
 }
 
 
@@ -66,6 +109,12 @@ body{
 
      }
 
+}
+
+input:focus, textarea:focus{
+  border-color:rgba(39, 138, 193, 0.5) !important;
+  border-width:3px;
+  box-shadow:none !important;
 }
 
 .background{

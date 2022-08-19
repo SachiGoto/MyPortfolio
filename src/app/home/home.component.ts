@@ -43,6 +43,7 @@ setTimeout(()=>{
 
   ngOnInit(): void {
 
+
     this.http.getAboutMe().subscribe(res=>{
       console.log("res is " , res.data.attributes);
       // better make an interface so that I can see what is in the data.

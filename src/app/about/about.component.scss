@@ -99,6 +99,9 @@
 .aboutMeContent{
   // width:80%;
   background-color:rgba(245, 245, 245,0.8);
+  h2{
+    font-size: 20px;
+  }
   // height:70vh;
   flex-direction:column;
   border-radius:10px;
@@ -106,7 +109,7 @@
   animation: aboutMoveToRight 3s;
   padding:2em 1em;
      p{
-      font-size:clamp(16px, 1.2vw ,20px);
+      font-size:clamp(12px, 1.2vw ,16px);
      }
 
 }
@@ -158,9 +161,9 @@
 
 
 .educationContainer{
-  height:100vh;
+  // height:100vh;
   width:80vw;
-  margin:0 auto;
+  margin:10% auto;
   flex-direction:column;
 
    .educationSubContainer{

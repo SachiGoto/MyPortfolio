@@ -8,7 +8,7 @@
 
    .nav-link{
     font-weight:normal;
-    font-size:25px;
+    font-size:20px;
    }
 }
 
@@ -30,6 +30,7 @@
 
 .navbar{
   background-color:rgba(216, 216, 216, 0) !important;
+  z-index:500;
 }
 
 .nav-link{
