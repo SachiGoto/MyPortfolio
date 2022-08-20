@@ -116,6 +116,7 @@
 }
 
 
+
 @keyframes swing {
   0% { transform: rotate(5deg);
       //  transform-origin:5% -10%;
@@ -127,8 +128,8 @@
 }
 
 @keyframes swing2 {
-  0% { transform: rotate(5deg); }
-  100% { transform: rotate(-5deg); }
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
 }
 
 @keyframes float{

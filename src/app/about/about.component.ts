@@ -147,24 +147,24 @@ export class AboutComponent implements OnInit {
         console.log("backend skills are " , this.skills);
 
 
-        this.educationSubContainer();
+        // this.educationSubContainer();
 
-        this.skillContainer();
+        // this.skillContainer();
+
+        this.fadeinContainer();
 
 
 
   })
   }
 
-
-
-  educationSubContainer() {
-    document.querySelectorAll('.educationSubContainer').forEach(container=>{
+  fadeinContainer() {
+    document.querySelectorAll('.fadeinSubContainer').forEach(container=>{
 
      const scrollBox = gsap.timeline({
        scrollTrigger: {
          trigger: container,
-         pin: true,
+         pin: false,
          start: '-250px center',
          end: 'bottom bottom',
          markers: false,
@@ -176,24 +176,44 @@ export class AboutComponent implements OnInit {
    }
 
 
-   skillContainer(){
 
-    document.querySelectorAll('.toolBox').forEach(container=>{
 
-      const scrollBox = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          pin: false,
-          start: '-150px center',
-          end: 'bottom bottom',
-          markers: false,
-          toggleActions: 'play none none reverse',
-        },
-      });
-      scrollBox.from(container, { y: 250, opacity: 0, duration:2});
-    });
+  // educationSubContainer() {
+  //   document.querySelectorAll('.educationSubContainer').forEach(container=>{
 
-   }
+  //    const scrollBox = gsap.timeline({
+  //      scrollTrigger: {
+  //        trigger: container,
+  //        pin: true,
+  //        start: '-250px center',
+  //        end: 'bottom bottom',
+  //        markers: false,
+  //        toggleActions: 'play none none reverse',
+  //      },
+  //    });
+  //    scrollBox.from(container, { y: 250, opacity: 0, duration:2});
+  //  });
+  //  }
+
+
+  //  skillContainer(){
+
+  //   document.querySelectorAll('.toolBox').forEach(container=>{
+
+  //     const scrollBox = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container,
+  //         pin: false,
+  //         start: '-150px center',
+  //         end: 'bottom bottom',
+  //         markers: false,
+  //         toggleActions: 'play none none reverse',
+  //       },
+  //     });
+  //     scrollBox.from(container, { y: 250, opacity: 0, duration:2});
+  //   });
+
+  //  }
 
   //  ngAfterViewChecked(){
 
