@@ -57,11 +57,15 @@ export class AboutComponent implements OnInit {
 
 
 
-
   ngOnInit(): void {
 
 
 
+//     const svg = document.getElementsByTagName("svg")[0];
+// const bbox = svg.getBBox();
+// const viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(" ");
+// svg.setAttribute("viewBox", viewBox);
+// prompt("Copy to clipboard: Ctrl+C, Enter", svg.outerHTML);
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
@@ -235,6 +239,7 @@ export class AboutComponent implements OnInit {
 
 
       // }
+
 
 
 

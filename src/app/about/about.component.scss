@@ -68,7 +68,9 @@
 
 //   }
 // }
-
+.nav-link{
+  z-index:10000;
+}
 
 
 .bg{
@@ -85,6 +87,7 @@
 
  .fieldBg{
   position:fixed;
+  transform:translateY(0%);
   // top:0;
   left:0;
   bottom:0;
@@ -109,9 +112,28 @@
 
 //  }
 
-#mountain5{
+
+
+#mountain4{
   transform: translateY(18%);
+  animation: moveup 5s ease-in-out infinite;
 }
+
+#mountain1{
+  transform: translateY(18%);
+  animation: moveup 8s ease-in-out infinite;
+}
+
+#mountain2{
+  transform: translateY(18%);
+  animation: moveup2 7s ease-in-out infinite;
+}
+
+#mountain3{
+  transform: translateY(18%);
+  animation: moveup2 3s ease-in-out infinite;
+}
+
 
 // #mountain3{
 //   transform: translateY(16%);
@@ -210,8 +232,14 @@
 .buttons{
   position:fixed;
   bottom:10%;
-  right:10%;
+  width:100%;
+  justify-content:center;
+  // right:10%;
   z-index:1000;
+
+    .btn{
+      animation:none;
+    }
 }
 
 
@@ -631,6 +659,24 @@ h2{
 @media(min-width:769px) and (max-width:992px) {
 
 
+.buttons{
+  position:fixed;
+  bottom:10%;
+  justify-content:end;
+  right:10%;
+  z-index:1000;
+
+    .btn{
+      animation:none;
+    }
+}
+
+ .fieldBg{
+  // height:600;
+  // width:2145;
+  // height:800;
+  transform:translateY(13%);
+ }
   .aboutMeImg{
     // height:50vh;
     // animation: aboutMoveToLeft 3s;
@@ -657,6 +703,18 @@ h2{
 
 
 @media(min-width:996px){
+
+  .buttons{
+    position:fixed;
+    bottom:10%;
+    justify-content:end;
+    right:10%;
+    z-index:1000;
+
+      .btn{
+        animation:none;
+      }
+  }
 
   @keyframes aboutMoveToLeft{
     0%{

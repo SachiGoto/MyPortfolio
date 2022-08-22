@@ -60,19 +60,19 @@ svg{
 
 #mountain1{
 
-  animation: moveup 5s  ease-in-out;
+  animation: moveup 5s infinite ease-in-out;
 
 }
 
 #mountain2{
 
-  animation: moveup 5s  ease-in-out;
+  animation: moveup 5s infinite  ease-in-out;
   animation-delay:1s;
 
 }
 #mountain3{
 
-  animation: moveup2 3s  ease-in-out;
+  animation: moveup2 3s infinite ease-in-out;
 
 }
 
@@ -89,25 +89,7 @@ svg{
 
 
 
-@keyframes moveup2{
-  0%{
-    transform:translateY(0px);
-  }50%{
-    transform:translateY(15px);
-  }100%{
-    transform:translateY(0px);
-  }
-}
 
-@keyframes moveup{
-  0%{
-    transform:translateY(0px);
-  }50%{
-    transform:translateY(10px);
-  }100%{
-    transform:translateY(0px);
-  }
-}
 
 
 #circleflower2{
