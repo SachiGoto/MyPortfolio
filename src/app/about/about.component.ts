@@ -27,8 +27,8 @@ export class AboutComponent implements OnInit {
 
 
 
-  websiteHeroImage:string='';
-  profileImage:string='';
+  // websiteHeroImage:string='';
+  // profileImage:string='';
   fullbio:any;
   headshotAltText:string='';
   resume:string='';
