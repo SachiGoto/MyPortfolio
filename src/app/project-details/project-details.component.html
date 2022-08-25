@@ -113,8 +113,8 @@
             </div> -->
               <div class="titleContainer">
                 <h1>{{project.attributes.Title}}</h1>
-                <h2>{{project.attributes.Tagline}}</h2>
-                <div>
+                <h4 style="font-weight:normal">{{project.attributes.Tagline}}</h4>
+                <div class="mb-3 mb-md-5 mt-3 mt-md-5">
                   <p [innerHTML]="project.attributes.Description"></p>
 
                 </div>
@@ -128,7 +128,7 @@
                     <!-- <div class="projectGithubIcon" *ngIf="project.attributes.Trailer">
                       <a target="_blank" href={{project.attributes.Trailer}}><img src="../../assets/logos/GitHub.png"></a>
                     </div> -->
-                    <div class="gitIcon d-flex flex-column justify-content-center align-items-center col-12 col-md-6">
+                    <div *ngIf="project.attributes.Trailer" class="gitIcon d-flex flex-column justify-content-center align-items-center col-12 col-md-6">
                       <button class="gitBtn"><a  target="_blank" href={{project.attributes.Trailer}}  class="button"> <i class="fa-brands fa-github"></i>GitHub</a></button>
                     </div>
                   <!-- </div> -->
@@ -207,8 +207,8 @@
             </div>
             <div class="titleContainer">
                 <h1>{{project.attributes.Title}}</h1>
-                <h2>{{project.attributes.Tagline}}</h2>
-                <div>
+                <h4 style="font-weight:normal">{{project.attributes.Tagline}}</h4>
+                <div class="mb-3 mb-md-5 mt-3 mt-md-5">
                   <p [innerHTML]="project.attributes.Description"></p>
                 </div>
                 <button class="visitBtn"  ><a target="_blank" href="{{project.attributes.WebLink}}">Visit</a></button>

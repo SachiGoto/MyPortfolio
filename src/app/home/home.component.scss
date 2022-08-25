@@ -349,9 +349,9 @@ svg{
 
     min-height:45px;
     min-width:175px;
-    background-color:$orange;
+    background-color:$beige;
     // width:65%;
-    color:$beige;
+    color:$orange;
     border:none;
     font-weight:bold;
     border-radius:30px;
@@ -362,8 +362,8 @@ svg{
 
   .exploreBtn:hover{
     border:none;
-    background-color:$beige;
-    color:$orange;
+    background-color:$orange;
+    color:$beige;
   }
 
   .exploreBtn:active{

@@ -1215,7 +1215,7 @@
           テクノロジー以外では、お菓子作りと環境に気を配る生活に興味があります。
          </p>
         </div>
-         <div class="aboutMeImg col-6 col-md-4 col-lg-4">
+         <div class="aboutMeImg">
           <div class="d-flex flex-column jusity-content-center align-items-end">
             <!-- <img [src]="profileImage" [alt]="headshotAltText"> -->
             <img src="../../assets/logos/headshot.jpg" [alt]="headshotAltText">
@@ -1246,19 +1246,27 @@
 
 
 
-<div class="educationContainer centercenter fadeinContainer">
+<div class="educationContainer centercenter">
 
-    <h2 class="educationTitle"> Schools</h2>
+    <h2 class=" fadeinSubContainer educationTitle"> Education</h2>
     <div class="educationContent">
-        <div class="educationSubContainer fadeinSubContainer p-3 row" *ngFor="let education of education">
+        <div class="educationSubContainer  fadeinSubContainer p-3 row" *ngFor="let education of education">
 
-          <h3 class="col-12 col-md-4">{{education.attributes.School}}</h3>
-          <div class=" col-12 col-md-8">
-               <h4 class="mb-5">{{education.attributes.Title}}</h4>
+          <h3 class="col-12 d-md-none">{{education.attributes.School}}</h3>
+          <div class="d-flex flex-column mb-5 col-5 d-md-block">
+            <h3 class="col-12 d-md-block">{{education.attributes.School}}</h3>
+            <p class="">{{education.attributes.Location}}</p>
+            <p class="educationDate">{{education.attributes.Year}}</p>
+          </div>
+
+
+          <div class=" col-12 col-md-5">
+            <h4 class=" d-md-none mb-5">{{education.attributes.Title}}</h4>
+
                <p>{{education.attributes.Note}}</p>
           </div>
-          <p class="col-12 col-md-12">{{education.attributes.Location}}</p>
-          <p class="col-12 col-md-12 educationDate">{{education.attributes.Year}}</p>
+          <p class="col-12 d-md-none">{{education.attributes.Location}}</p>
+          <p class="col-12 d-md-none educationDate">{{education.attributes.Year}}</p>
         </div>
     </div>
 
@@ -1272,8 +1280,8 @@
 
 
 
-  <h2 class="skillsTitle">Skills</h2>
-<div class="skillsContainer row fadeinContainer">
+  <h2 class=" fadeinSubContainer skillsTitle">Skills</h2>
+<div class="skillsContainer row">
 
   <div class="designTools toolBox fadeinSubContainer col-8 col-lg-3">
     <h3>Design</h3>
@@ -1403,11 +1411,11 @@
 <div class="buttons d-flex">
 
 <div class="btnContainer centercenter me-3" routerLink="/projects"><button class="btn">Projects</button></div>
-  <a target="_blank" [href]="resume">
-  <button class=" btn " style="font-weight:bold;"><a>My resume
+
+  <button class="secondaryBtn" style="font-weight:bold;"><a target="_blank" [href]="resume">My resume
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g data-name="download"><path  d="M25,19a1,1,0,0,0-1,1v5H8V20a1,1,0,0,0-2,0v5.14A1.93,1.93,0,0,0,8,27H24a1.93,1.93,0,0,0,2-1.86V20A1,1,0,0,0,25,19Z"/><path d="M15.27,20.68l0,0a1.2,1.2,0,0,0,.26.18l0,0h0A1,1,0,0,0,16,21a1,1,0,0,0,.38-.08l.12-.07a1.13,1.13,0,0,0,.18-.12l0,0,0,0,5-5.38a1,1,0,1,0-1.46-1.37L17,17.45V6a1,1,0,0,0-2,0V17.45l-3.27-3.52a1,1,0,1,0-1.46,1.37Z"/></g></svg></a>
     </button>
-  </a>
+
 </div>
 
 

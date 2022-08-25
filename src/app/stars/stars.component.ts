@@ -48,13 +48,13 @@ export class StarsComponent implements OnInit {
       }
       // let createStars = () => {
 
-      let stars = getDivState().width / 50 ;  // the mass of the stars
+      let stars = getDivState().width / 20 ;  // the mass of the stars
 
       for (let i=1; i<=stars; i++) { // create stars limit by screen size
         let star = document.createElement("div");
 
         star.className = "star";
-        let sizeOfStar = getRanNum(5, 7);
+        let sizeOfStar = getRanNum(2, 4);
         star.style.borderRadius = "10px";
         star.style.position = "absolute";
         star.style.animation = "twinkle 3s infinite";

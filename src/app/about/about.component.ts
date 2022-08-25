@@ -170,12 +170,12 @@ export class AboutComponent implements OnInit {
          trigger: container,
          pin: false,
          start: '-250px center',
-         end: 'bottom bottom',
+        //  end: 'top top',
          markers: false,
          toggleActions: 'play none none reverse',
        },
      });
-     scrollBox.from(container, { y: 250, opacity: 0, duration:2});
+     scrollBox.from(container, { y: 150, opacity: 0, duration:2});
    });
    }
 
