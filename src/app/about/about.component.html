@@ -1252,21 +1252,22 @@
     <div class="educationContent">
         <div class="educationSubContainer  fadeinSubContainer p-3 row" *ngFor="let education of education">
 
-          <h3 class="col-12 d-md-none">{{education.attributes.School}}</h3>
-          <div class="d-flex flex-column mb-5 col-5 d-md-block">
-            <h3 class="col-12 d-md-block">{{education.attributes.School}}</h3>
+          <!-- <h3 class="col-12 d-flex d-md-none">{{education.attributes.School}}</h3> -->
+          <div class="d-flex flex-column mb-md-5 col-12 col-md-4">
+            <h3 class="col-12 ">{{education.attributes.School}}</h3>
             <p class="">{{education.attributes.Location}}</p>
             <p class="educationDate">{{education.attributes.Year}}</p>
           </div>
 
 
-          <div class=" col-12 col-md-5">
-            <h4 class=" d-md-none mb-5">{{education.attributes.Title}}</h4>
+          <div class=" col-12 col-md-8">
+            <!-- <h4 class=" d-md-none mb-5">{{education.attributes.Title}}</h4> -->
+            <h4 class="">{{education.attributes.Title}}</h4>
 
                <p>{{education.attributes.Note}}</p>
           </div>
-          <p class="col-12 d-md-none">{{education.attributes.Location}}</p>
-          <p class="col-12 d-md-none educationDate">{{education.attributes.Year}}</p>
+          <!-- <p class="col-12 d-md-none">{{education.attributes.Location}}</p>
+          <p class="col-12 d-md-none educationDate">{{education.attributes.Year}}</p> -->
         </div>
     </div>
 

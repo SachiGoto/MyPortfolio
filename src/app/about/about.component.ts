@@ -89,10 +89,10 @@ export class AboutComponent implements OnInit {
           console.log("res is " , res.data.attributes);
           // better make an interface so that I can see what is in the data.
           // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
-          this.websiteHeroImage =res.data.attributes.WebsiteHeroImage.data.attributes.url;
-          console.log(this.websiteHeroImage);
+          // this.websiteHeroImage =res.data.attributes.WebsiteHeroImage.data.attributes.url;
+          // console.log(this.websiteHeroImage);
 
-          this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
+          // this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
 
           this.fullbio=res.data.attributes.FullBio;
           this.headshotAltText = res.data.attributes.Headshot.data.attributes.alternativeText;
