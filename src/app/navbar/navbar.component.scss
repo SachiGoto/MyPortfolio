@@ -105,7 +105,7 @@
   visibility: hidden;
   transition: visibility .35s, height .35s;
   overflow: hidden;
-  z-index: 10;
+  z-index: 20;
 }
 .overlay.open {
   // opacity: .9;
