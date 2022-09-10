@@ -131,7 +131,7 @@
                     </div>
                   <!-- </div> -->
                   <div class=" galleryContainer mt-5 d-flex justify-content-center align-items-center col-12">
-                    <p (click)="scrollTo(summary)" class="gallery d-flex justify-content-center">
+                    <p class="gallery d-flex justify-content-center">
                       <!-- <a href="projects/{{project.id}}/{{project.attributes.Slug}}#imagecontainer">Summary</a> -->
                       Gallery</p>
                         <svg class="summaryArrow" width="31" height="8" viewBox="0 0 31 8" xmlns="http://www.w3.org/2000/svg">
@@ -148,12 +148,12 @@
 
           <!-- <div class="imagecontainer" id="imagecontainer"> -->
             <div  class="imagecontainer" id="imagecontainer" >
-            <div #summary  class="image">
+            <!-- <div #summary  class="image"> -->
               <!-- <img aos-init data-aos="fade-up"
               data-aos-anchor-placement="top-bottom" [src]="server + project.attributes.MainImage.data.attributes.formats.medium.url"> -->
-              <img aos-init data-aos="fade-up"
-              data-aos-anchor-placement="top-bottom" [src]="project.attributes.MainImage.data.attributes.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText">
-            </div>
+              <!-- <img aos-init data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom" [src]="project.attributes.MainImage.data.attributes.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText"> -->
+            <!-- </div> -->
             <div *ngFor="let image of project.attributes.Images.data" class="image" >
                <!-- <img aos-init data-aos="zoom-in"
                data-aos-duration="1000" [src]=" server + image.attributes.formats.large.url"> -->

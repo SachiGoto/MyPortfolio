@@ -213,7 +213,7 @@
         <button target="_blank" class="detailBtn-desktop d-none d-lg-block"  (click)="translate(project.id, project.attributes.Slug)">Details</button>
         <!-- <a  target="_blank" [routerLink]="['/projects', project.id, project.attributes.Slug]"> -->
           <!-- <img [src]=" server + project.attributes.MainImage.data.attributes.formats.medium.url"> -->
-           <img [src]="project.attributes.MainImage.data.attributes.formats.medium.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText">
+           <img [src]="project.attributes.MainImage.data.attributes.url" [alt]="project.attributes.MainImage.data.attributes.alternativeText">
 
         <!-- </a> -->
       </div>
