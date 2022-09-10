@@ -4,6 +4,22 @@
 //   src: url(./assets/info.txt);
 // }
 
+@font-face {
+  font-family: karelle ;
+  src: url(../../../assets/greenImg/Karelledemo-vmZA4.otf);
+}
+
+
+p{
+  font-family: 'Karla', sans-serif;
+}
+
+h1,h2,h3{
+  font-family:karelle;
+}
+
+
+
 @mixin center_center($direction:row){
   display:flex;
   justify-content:center;
