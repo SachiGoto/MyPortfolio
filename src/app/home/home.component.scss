@@ -352,19 +352,19 @@ svg{
   padding-left: 0 !important;
 }
 
+.button{
+  min-height:45px;
+  min-width:175px;
+  border:none;
+  font-weight:bold;
+  border-radius:30px;
+  margin-top:5%;
+
+}
+
 .exploreBtn{
-
-    min-height:45px;
-    min-width:175px;
     background-color:$beige;
-    // width:65%;
     color:$orange;
-    border:none;
-    font-weight:bold;
-    border-radius:30px;
-    // padding:1em 2em;
-    margin-top:5%;
-
   }
 
   .exploreBtn:hover{
@@ -373,11 +373,28 @@ svg{
     color:$beige;
   }
 
-  .exploreBtn:active{
-     transform:translateY(4px);
-    //  background-color:#d0c8bc;
-     border:none;
+  // .exploreBtn:active{
+  //    transform:translateY(4px);
+  //   //  background-color:#d0c8bc;
+  //    border:none;
+  // }
+
+
+
+  .skipToProjectsBtn{
+    background-color:$orange;
+    color:$beige;
+    margin-left:5%;
   }
+
+  .skipToProjectsBtn:hover{
+    border:none;
+    background-color:$beige;
+    color:$orange;
+  }
+
+
+
 
 // ---------------------------------------------------
 

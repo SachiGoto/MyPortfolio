@@ -39,6 +39,10 @@ setTimeout(()=>{
 
 }
 
+toProjects(){
+  this.route.navigate(["/projects"]);
+}
+
 
 
   ngOnInit(): void {

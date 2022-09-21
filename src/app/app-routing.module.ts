@@ -13,11 +13,6 @@ import {GreenProductDetailComponent} from './greenaroundtheworld/product-detail/
 import { GreenAboutComponent } from './greenaroundtheworld/about/about.component';
 import { GreenFooterComponent } from './greenaroundtheworld/footer/footer.component';
 
-
-
-
-
-
 const routes: Routes = [
   {path:"home", component:HomeComponent},
   {path:"", component: HomeComponent},
