@@ -2,7 +2,7 @@
 
 
 <!-- <div class="background" style="background-image:url(../../assets/wallpaper/portfoliowallpaperNight.svg)"></div> -->
-
+<!-- <script src="https://kwesforms.com/v2/kwes-script.js" defer></script> -->
 <svg class="bg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 2145 1179" fill="none" xmlns="http://www.w3.org/2000/svg">
 
   <g id="portfolio_bg_003d891baf (1) 1" clip-path="url(#clip0_5_908)">
@@ -215,7 +215,7 @@
               <div class="email">
               <!-- <li class=""><a href="#"><img src="../../assets/logos/emailicon.png" width="30"></a>
               </li> -->
-              <li class=""><a href="mailto:{{aboutme.attributes.Email}} " target="_blank"><img [src]="emailIcon" width="30"></a>
+              <li class=""><a href="mailto:gotosachiii@gmail.com " target="_blank"><img src="https://res.cloudinary.com/vanarts-webdev/image/upload/v1660103888/email_ac705d1200.png" width="30"></a>
 
               </li>
               <!-- <div class="line">
@@ -231,7 +231,7 @@
               <!-- <li class=""><a href="#"><img src="../../assets/logos/Instagram_Glyph_Gradient.png" width="30"></a>
 
               </li> -->
-              <li class=""><a href="{{aboutme.attributes.Instagram}}" target="_blank"><img [src]="instagramIcon" width="30"></a>
+              <li class=""><a href="https://www.instagram.com/sachi8619/" target="_blank"><img src="https://res.cloudinary.com/vanarts-webdev/image/upload/v1660103951/Instagram_Glyph_Gradient_RGB_16d1141cb2.svg" width="30"></a>
               </li>
               <!-- <div class="line">
               </div> -->
@@ -244,7 +244,7 @@
 
                   <div class="box">
             <div class="linkedin">
-              <li class=""><a href="{{aboutme.attributes.LinkedIn}}" target="_blank"><img [src]="linkedinIcon" width="30"></a>
+              <li class=""><a href="https://www.linkedin.com/in/sachi-goto/" target="_blank"><img src="https://res.cloudinary.com/vanarts-webdev/image/upload/v1660116965/linkedin_003a9a7b40.png" width="30"></a>
               </li>
               <!-- <div class="line">
               </div> -->
@@ -255,20 +255,66 @@
 
   </div>
 
+  <form #form="ngForm"  method="POST" action="https://kwesforms.com/api/foreign/forms/WHiH7KagbhEjlEzM7x5k"  class="kews-form formClass col-sm-12 col-md-5">
+    <div class="mb-3">
+      <!-- <label for="name" class="form-label">Name</label> -->
+      <input [(ngModel)]="name" name="name" type="text"  placeholder="Name" class="form-control" id="name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <!-- <label for="email" class="form-label">Email address</label> -->
+      <input [(ngModel)]="email" name="email"  type="email" class="form-control" placeholder="Email"  id="email" aria-describedby="emailHelp">
+
+    </div>
+    <div class="form-group">
+      <!-- <label for="message">Comments</label> -->
+      <textarea [(ngModel)]="message" name="message" placeholder="Message"  class="form-control" id="message" rows="3"></textarea>
+    </div>
+    <div class="mt-3">
+      <re-captcha (resolved)="resolved($event)" siteKey="6LcbP-cgAAAAAK6KiBfA0OFIhmV5XIj7aMnth4MH" class="mt-3"></re-captcha>
+    </div>
+    <button (click)="submitLead()" [disabled]="formInvalid" type="submit" class="btn btn-primary mt-3">Send</button>
+
+    <div class="mt-3" [hidden]="formMessageHidden">
+      Thank you for contacting me, {{name}}. I will get in touch with you soon!
+    </div>
 
 
-    <form #form="ngForm" class="formClass col-sm-12 col-md-5">
+  </form>
+<!-- <div class="kews-form formClass">
+
+    <form method="POST" action="https://kwesforms.com/api/foreign/forms/WHiH7KagbhEjlEzM7x5k" class=" form col-sm-12 col-md-5" >
       <div class="mb-3">
-        <!-- <label for="name" class="form-label">Name</label> -->
+
+        <input  type="text" class="form-control" name="name" placeholder="Your name" rules="required">
+      </div>
+      <div class="mb-3">
+        <input  type="text" class="form-control" name="email" placeholder="Email" rules="email|required">
+      </div>
+      <div class="form-group">
+
+        <textarea  name="message" class="form-control" placeholder="Message"  id="message" rows="3" rules="required"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Send</button>
+
+
+    </form>
+</div> -->
+
+
+
+    <!-- <form #form="ngForm" class="formClass col-sm-12 col-md-5">
+      <div class="mb-3">
+
         <input [(ngModel)]="name" name="name" type="text"  placeholder="Name" class="form-control" id="name" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
-        <!-- <label for="email" class="form-label">Email address</label> -->
+
         <input [(ngModel)]="email" name="email"  type="email" class="form-control" placeholder="Email"  id="email" aria-describedby="emailHelp">
 
       </div>
       <div class="form-group">
-        <!-- <label for="message">Comments</label> -->
+
         <textarea [(ngModel)]="message" name="message" placeholder="Message"  class="form-control" id="message" rows="3"></textarea>
       </div>
       <div class="mt-3">
@@ -281,7 +327,7 @@
       </div>
 
 
-    </form>
+    </form> -->
 
 
 

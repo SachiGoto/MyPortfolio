@@ -9,6 +9,19 @@ Content-Type: application/json
   }
 }
 
+###
+
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+
+    "name":"Test August 9th",
+    "email":"test@test.commmmmmmm",
+    "message":"Some test message from local 5th august"
+
+}
+
 
 ###
 GET https://cms.sachigoto.me/api/skills/?populate=deep,2

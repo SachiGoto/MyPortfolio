@@ -19,14 +19,12 @@ export class NavbarComponent implements OnInit {
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
-    this.cs.getAboutMe().subscribe(res=>{
-      // this.logo = this.server + res.data.attributes.Logo.data.attributes.url;
-      this.logo = res.data.attributes.Logo.data.attributes.url;
-      this.logoAltText = res.data.attributes.Logo.data.attributes.alternativeText;
+    // this.cs.getAboutMe().subscribe(res=>{
 
-      // console.log("logo url is" , this.logo)
+    //   this.logo = res.data.attributes.Logo.data.attributes.url;
+    //   this.logoAltText = res.data.attributes.Logo.data.attributes.alternativeText;
 
-    })
+    // })
   }
 
 

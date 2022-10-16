@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { gsap } from "gsap";
 import Draggable from "gsap/Draggable";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { HttpClient } from '@angular/common/http';
 
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
@@ -15,15 +16,17 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-projects:ProjectDetail[]=[];
+// projects:ProjectDetail[]=[];
 websiteHeroImage ='';
+
+projectJson:any;
 
 state=false;
 
 server = environment.server;
 
 
-  constructor(private cs:CommonService, private route:Router) { }
+  constructor(private cs:CommonService, private route:Router, private http:HttpClient) { }
 
   translate(id:number, slug:any){
 
@@ -46,6 +49,14 @@ server = environment.server;
 
   ngOnInit(): void {
 
+    this.http.get('assets/projects.json').subscribe((res)=>{
+      this.projectJson = res
+      this.projectJson = this.projectJson.data;
+      console.log(this.projectJson);
+      // console.log("category is ", this.projectJson.attributes.Category)
+
+     })
+
   // window.onbeforeunload = function () {
   //     window.scrollTo(0, 0);
   //   }
@@ -54,22 +65,22 @@ server = environment.server;
       window.scrollTo(0, 0);
     }
 
-    this.cs.getProjects().subscribe(res=>{
-         this.projects = res.data;
-         console.log("project data" , res.data);
-      }
-    )
+    // this.cs.getProjects().subscribe(res=>{
+    //      this.projects = res.data;
+    //      console.log("project data" , res.data);
+    //   }
+    // )
 
-    this.cs.getAboutMe().subscribe(res=>{
-      console.log(res);
-      // better make an interface so that I can see what is in the data.
-      // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
-      this.websiteHeroImage = res.data.attributes.WebsiteHeroImage.data.attributes.url;
+    // this.cs.getAboutMe().subscribe(res=>{
+    //   console.log(res);
+    //   // better make an interface so that I can see what is in the data.
+    //   // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+    //   this.websiteHeroImage = res.data.attributes.WebsiteHeroImage.data.attributes.url;
 
-      console.log(this.websiteHeroImage);
+    //   console.log(this.websiteHeroImage);
 
 
-    })
+    // })
 
     // this.skillContainer();
     gsap.registerPlugin(ScrollTrigger);

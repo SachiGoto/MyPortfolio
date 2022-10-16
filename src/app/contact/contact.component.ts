@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { start } from '@popperjs/core';
+// import { kwesforms } from 'kwesforms';
 import { CommonService } from '../service/common.service';
+import { FormControl } from '@angular/forms';
+// import * as kwesforms from 'kwesforms';
+
+// import * as Aos from 'aos';
+
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +17,10 @@ import { CommonService } from '../service/common.service';
 export class ContactComponent implements OnInit {
 
   constructor( private http:CommonService) { }
+
+
+
+  // const kwesforms = require('kwesforms');
 
   name='';
   email='';
@@ -32,25 +42,44 @@ export class ContactComponent implements OnInit {
   submitLead(){
     console.log("Hello");
     this.formInvalid = true;
-    let leaddata = {
-      "data":{
+ let leaddata = {
+
         "name": this.name,
         "email": this.email,
         "message":this.message
-      }
+
     }
 
+    // let leaddata = {
+    //   "data":{
+    //     "name": this.name,
+    //     "email": this.email,
+    //     "message":this.message
+    //   }
+    // }
+
+    // let kwesScript = document.createElement('script')
+
+    // kwesScript.setAttribute('src', 'https://kwes.io/js/kwes.js')
+
+    // document.head.appendChild(kwesScript)
+
+    // this.http.postlead(leaddata).subscribe(res=>{
+    //   console.log(res);
+    //   this.formMessageHidden = false;
+
     this.http.postlead(leaddata).subscribe(res=>{
-      console.log(res);
       this.formMessageHidden = false;
-
-
-
-
-
+      console.log("res is " , res);
     })
 
-    console.log(leaddata);
+
+
+
+
+    // })
+
+    // console.log(leaddata);
 
     this.name='';
   this.email='';
@@ -80,6 +109,13 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // kwesforms.init();
+
+    // let kwesScript = document.createElement('script')
+
+    // kwesScript.setAttribute('src', 'https://kwes.io/js/kwes.js')
+
+    // document.head.appendChild(kwesScript)
 
 
 
@@ -141,19 +177,19 @@ export class ContactComponent implements OnInit {
 
   //   // }
 
-    this.http.getAboutMe().subscribe(res=>{
-      console.log("res is " , res.data.attributes);
-      this.aboutme = res.data;
-      console.log("aboutme is " , this.aboutme);
-      // better make an interface so that I can see what is in the data.
-      // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
-      this.websiteHeroImage =res.data.attributes.WebsiteHeroImage.data.attributes.url;
-      console.log(this.websiteHeroImage);
-      this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
-      this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
-      this.instagramIcon = res.data.attributes.InstagramIcon.data.attributes.url;
+    // this.http.getAboutMe().subscribe(res=>{
+    //   console.log("res is " , res.data.attributes);
+    //   this.aboutme = res.data;
+    //   console.log("aboutme is " , this.aboutme);
+    //   // better make an interface so that I can see what is in the data.
+    //   // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+    //   this.websiteHeroImage =res.data.attributes.WebsiteHeroImage.data.attributes.url;
+    //   console.log(this.websiteHeroImage);
+    //   this.emailIcon = res.data.attributes.EmailIcon.data.attributes.url;
+    //   this.linkedinIcon = res.data.attributes.LinkedinIcon.data.attributes.url;
+    //   this.instagramIcon = res.data.attributes.InstagramIcon.data.attributes.url;
 
-    })
+    // })
       // this.profileImage=res.data.attributes.Headshot.data.attributes.formats.large.url;
 
       // this.fullbio=res.data.attributes.FullBio;

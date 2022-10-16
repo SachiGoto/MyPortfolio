@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import * as Aos from 'aos';
+import { HttpClient } from '@angular/common/http'
+
+
 
 // import AOS from 'aos';
 
@@ -29,9 +32,13 @@ export class ProjectDetailsComponent implements OnInit {
 
   // private observer:IntersectionObserver;
 
-  constructor(private route:ActivatedRoute, private http:CommonService) {}
+  constructor(private route:ActivatedRoute, private hp:HttpClient, private http:CommonService) {}
   // project:ProjectDetail;
- project:ProjectDetail;
+//  project:ProjectDetail;
+
+ project:any;
+
+
 
 
 
@@ -59,17 +66,38 @@ scrollTo(summary:any){
 });
 }
 
+
+
   ngOnInit(): void {
+
+  //  console.log("project json " , this.http.getJson);
+
+  //  this.projectJson = this.http.getJson()
+
+
+
+  //  this.http.getAboutMe().subscribe(res=>{
+
+  //  })
+  //  this.projectJson = this.http.getJson
+
+
 
     window.scrollTo(0,0);
     // AOS.init()
     let id:any= this.route.snapshot.paramMap.get("projectID");
     let slug:any = this.route.snapshot.paramMap.get("slug")
-    this.http.getProjectById(id).subscribe(project=>{
-this.project = project.data;
-console.log("project is " , this.project)
+//     this.http.getProjectById(id).subscribe(project=>{
+// this.project = project.data;
 
-    })
+//     })
+this.hp.get('assets/projects.json').subscribe((res)=>{
+  this.project = res
+  this.project = this.project.data[id-1];
+  console.log(this.project.data[id-1]);
+  console.log("category is ", this.project.data.attributes.Category)
+
+ })
 
 
   Aos.init();

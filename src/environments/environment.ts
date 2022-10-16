@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   // server: "http://localhost:1337"
-  server:"https://cms.sachigoto.me"
+  // server:"https://cms.sachigoto.me"
+  server:"http://localhost:3000"
+
 };
 
 /*

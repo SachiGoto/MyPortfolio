@@ -17,10 +17,10 @@ export class MyskillsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.cs.getSkills().subscribe(res=>{
-      console.log(res);
-      this.myskills = res.data;
-    })
+    // this.cs.getSkills().subscribe(res=>{
+    //   console.log(res);
+    //   this.myskills = res.data;
+    // })
   }
 
 }
